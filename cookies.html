@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookies Policy · Abstract Built Matter</title>
+  <meta name="description" content="Cookies policy for Abstract Built Matter — how we use cookies, tracking technologies, and your choices.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Cookies Policy · Abstract Built Matter">
+  <meta property="og:description" content="How we use cookies and how you can control them.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=630&fit=crop">
+  <meta property="og:url" content="https://abstractbuiltmatter.com/cookies.html">
+  <link rel="canonical" href="https://abstractbuiltmatter.com/cookies.html">
+  <!-- Fonts + Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --ink: #1a1a1a;
+      --paper: #f9f8f6;
+      --paper-alt: #f1efec;
+      --line: #ddd9d2;
+      --line-dark: #c2bbb2;
+      --accent: #9b7b5e;
+      --accent-deep: #6f5640;
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --max-width: 1380px;
+      --content-width: 820px;
+    }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 350;
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--serif);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    h1 { font-size: 3.2rem; }
+    h2 { font-size: 2.2rem; margin-bottom: 1.2rem; }
+    h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    h4 { font-size: 1.15rem; font-family: var(--sans); font-weight: 600; letter-spacing: -0.01em; }
+
+    a {
+      color: var(--ink);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    a:hover {
+      color: var(--accent-deep);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* ----- HEADER ----- */
+    .blog-header {
+      border-bottom: 1px solid var(--line);
+      padding: 24px 0 16px;
+      background: var(--paper);
+      position: relative;
+      z-index: 10;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-mark {
+      width: 44px;
+      height: 44px;
+      background: var(--ink);
+      color: var(--paper);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      line-height: 1;
+      border-radius: 2px;
+      transform: rotate(-2deg);
+    }
+
+    .logo-text {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+
+    .logo-text span {
+      display: block;
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-top: 2px;
+    }
+
+    .main-nav ul {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+      font-size: 0.9rem;
+      font-weight: 450;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .main-nav a {
+      color: #3d3d3d;
+      font-size: 0.82rem;
+    }
+
+    .main-nav a:hover {
+      color: var(--accent-deep);
+    }
+
+    .search-trigger {
+      background: none;
+      border: 1px solid var(--line);
+      border-radius: 40px;
+      padding: 8px 18px;
+      font-size: 0.85rem;
+      font-family: var(--sans);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #4a4a4a;
+      transition: all 0.2s;
+    }
+
+    .search-trigger:hover {
+      background: var(--paper-alt);
+      border-color: var(--line-dark);
+    }
+
+    /* ----- SEARCH BAR (hidden until triggered) ----- */
+    .search-panel {
+      display: none;
+      padding: 16px 0 24px;
+      border-bottom: 1px solid var(--line);
+      background: var(--paper);
+    }
+
+    .search-panel.active {
+      display: block;
+    }
+
+    .search-inner {
+      display: flex;
+      gap: 12px;
+    }
+
+    .search-inner input {
+      flex: 1;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      background: white;
+      font-family: var(--sans);
+      font-size: 1rem;
+      border-radius: 2px;
+    }
+
+    .search-inner input:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .search-inner button {
+      padding: 0 28px;
+      background: var(--ink);
+      color: white;
+      border: none;
+      font-family: var(--sans);
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+
+    .search-inner button:hover {
+      background: var(--accent-deep);
+    }
+
+    /* ----- PAGE HERO ----- */
+    .page-hero {
+      padding: 56px 0 32px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .page-hero h1 {
+      font-size: 3.4rem;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .page-hero .subhead {
+      font-size: 1.2rem;
+      color: #4a4a4a;
+      max-width: 720px;
+    }
+
+    /* ----- COOKIES CONTENT (single column) ----- */
+    .cookies-section {
+      padding: 48px 0 64px;
+    }
+
+    .cookies-content {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 48px 52px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+
+    .cookies-content h2 {
+      font-size: 1.8rem;
+      margin-top: 2.2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cookies-content h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .cookies-content h3 {
+      font-family: var(--sans);
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin: 1.8rem 0 0.8rem;
+      letter-spacing: -0.01em;
+    }
+
+    .cookies-content p {
+      margin-bottom: 1.2rem;
+      color: #2a2a2a;
+    }
+
+    .cookies-content ul, .cookies-content ol {
+      margin: 0 0 1.5rem 1.5rem;
+      color: #2a2a2a;
+    }
+
+    .cookies-content li {
+      margin-bottom: 0.5rem;
+    }
+
+    .cookies-content a {
+      border-bottom: 1px dotted var(--line-dark);
+    }
+
+    .cookies-content a:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    .cookies-content .cookies-meta {
+      font-size: 0.9rem;
+      color: #666;
+      font-style: italic;
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cookies-content .highlight-box {
+      background: var(--paper-alt);
+      padding: 24px 28px;
+      border-radius: 4px;
+      margin: 2rem 0 1.5rem;
+      border-left: 4px solid var(--accent);
+      font-size: 0.98rem;
+    }
+
+    /* Table for cookie categories */
+    .cookie-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0 2rem;
+      font-size: 0.9rem;
+    }
+
+    .cookie-table th {
+      text-align: left;
+      background: var(--paper-alt);
+      padding: 12px 12px;
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #4a4a4a;
+      border-bottom: 2px solid var(--line-dark);
+    }
+
+    .cookie-table td {
+      padding: 12px 12px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    .cookie-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* ----- FOOTER ----- */
+    .editorial-footer {
+      border-top: 1px solid var(--line);
+      padding: 56px 0 32px;
+      background: var(--paper-alt);
+      margin-top: 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand p {
+      font-size: 0.88rem;
+      color: #4d4d4d;
+      max-width: 280px;
+      margin-top: 12px;
+    }
+
+    .footer-col h5 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #5a5a5a;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col a {
+      font-size: 0.88rem;
+      color: #3d3d3d;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 0.78rem;
+      color: #777;
+    }
+
+    .footer-bottom a {
+      color: #555;
+      margin-left: 20px;
+    }
+
+    /* ----- RESPONSIVE ----- */
+    @media (max-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      h1 { font-size: 2.6rem; }
+      .page-hero h1 { font-size: 2.8rem; }
+      .cookies-content {
+        padding: 36px 28px;
+      }
+      .cookie-table {
+        font-size: 0.82rem;
+      }
+      .cookie-table th, .cookie-table td {
+        padding: 10px 8px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .main-nav ul {
+        flex-wrap: wrap;
+        gap: 16px 24px;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      h1 { font-size: 2rem; }
+      .page-hero h1 { font-size: 2.2rem; }
+      .container { padding: 0 20px; }
+      .search-inner { flex-direction: column; }
+      .search-inner button { padding: 14px; }
+      .cookies-content {
+        padding: 28px 20px;
+      }
+      .cookies-content h2 {
+        font-size: 1.5rem;
+      }
+      .cookie-table {
+        font-size: 0.75rem;
+      }
+      .cookie-table th, .cookie-table td {
+        padding: 8px 6px;
+      }
+      .cookie-table th {
+        font-size: 0.7rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .cookie-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+    }
+
+    /* utility */
+    .hidden { display: none; }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+    }
+    .mt-2 { margin-top: 8px; }
+    .mb-2 { margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="blog-header">
+  <div class="container">
+    <div class="header-inner">
+      <div class="logo">
+        <div class="logo-mark">A</div>
+        <div class="logo-text">Abstract Built Matter<span>Interior · Architecture</span></div>
+      </div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="terms.html">Terms Of Privacy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookies.html">Cookies Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="categories.html">Categories</a></li>
+        </ul>
+      </nav>
+      <button class="search-trigger" id="searchToggle" aria-label="Open search">
+        <i class="fas fa-search"></i> Search
+      </button>
+    </div>
+  </div>
+  <!-- search panel -->
+  <div class="search-panel" id="searchPanel">
+    <div class="container">
+      <div class="search-inner">
+        <input type="text" id="searchInput" placeholder="Search articles, topics, or keywords..." aria-label="Search articles">
+        <button id="searchButton">Search</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ========== PAGE HERO ========== -->
+<section class="page-hero">
+  <div class="container">
+    <h1>Cookies Policy</h1>
+    <p class="subhead">How we use cookies and similar technologies — and how you can manage them.</p>
+  </div>
+</section>
+
+<!-- ========== COOKIES CONTENT ========== -->
+<main class="container cookies-section">
+  <div class="cookies-content">
+    <p class="cookies-meta">Last updated: April 14, 2025 · Effective immediately</p>
+
+    <p>This Cookies Policy explains how <strong>Abstract Built Matter</strong> ("we," "our," or "us") uses cookies and similar tracking technologies on our website. It should be read alongside our <a href="privacy.html">Privacy Policy</a>, which explains how we handle your personal information more broadly.</p>
+
+    <div class="highlight-box">
+      <strong>Quick summary:</strong> We use cookies to make our site work, understand how readers use it, and improve your experience. You can control cookies through your browser settings — but disabling some may affect how the site functions.
+    </div>
+
+    <h2>1. What are cookies?</h2>
+    <p>Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently, as well as to provide information to the site owners.</p>
+    <p>Cookies can be "persistent" (remaining on your device until they expire or you delete them) or "session" cookies (deleted when you close your browser). They can also be "first-party" (set by us) or "third-party" (set by a service we use, like Google Analytics).</p>
+
+    <h2>2. How we use cookies</h2>
+    <p>We use cookies for the following purposes:</p>
+    <ul>
+      <li><strong>Essential functionality:</strong> To ensure the website works properly, including remembering your cookie consent preferences and basic security features.</li>
+      <li><strong>Analytics and performance:</strong> To understand how visitors interact with our content — which pages are most popular, how long readers stay, and how they navigate the site. This helps us improve our editorial coverage.</li>
+      <li><strong>Preferences:</strong> To remember settings you may have chosen (such as font size or display preferences) so you don't have to re-enter them.</li>
+      <li><strong>Third-party services:</strong> Some cookies are placed by third-party services that appear on our pages, such as embedded content or analytics providers.</li>
+    </ul>
+
+    <h2>3. Types of cookies we use</h2>
+    <p>The table below describes the specific categories of cookies we use and what they do:</p>
+
+    <table class="cookie-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Purpose</th>
+          <th>Examples</th>
+          <th>Duration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Strictly Necessary</strong></td>
+          <td>Essential for the website to function. They enable core features like security, network management, and accessibility.</td>
+          <td>Cookie consent preferences, session management</td>
+          <td>Session to 1 year</td>
+        </tr>
+        <tr>
+          <td><strong>Analytics / Performance</strong></td>
+          <td>Help us understand how visitors use the site by collecting anonymized data on page views, traffic sources, and user behavior.</td>
+          <td>Google Analytics (_ga, _gid)</td>
+          <td>Up to 2 years</td>
+        </tr>
+        <tr>
+          <td><strong>Functional / Preference</strong></td>
+          <td>Allow the site to remember choices you make (such as language or display preferences) to provide a more personalized experience.</td>
+          <td>Font size, dark mode preference (if applicable)</td>
+          <td>Up to 1 year</td>
+        </tr>
+        <tr>
+          <td><strong>Third-Party / Embedded</strong></td>
+          <td>Set by third-party services we use for content embedding, social sharing, or newsletter signup forms.</td>
+          <td>Unsplash CDN, Mailchimp embed, social media widgets</td>
+          <td>Varies by provider</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>4. Third-party cookies</h2>
+    <p>Some cookies on our site are placed by third-party service providers. We do not control these cookies, and they are subject to the respective third party's privacy and cookie policies. The main third parties we work with include:</p>
+    <ul>
+      <li><strong>Google Analytics</strong> — for anonymous traffic analysis. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</li>
+      <li><strong>Mailchimp</strong> — for newsletter signup forms and email delivery. <a href="https://mailchimp.com/legal/privacy/" target="_blank" rel="noopener">Mailchimp Privacy Policy</a>.</li>
+      <li><strong>Unsplash</strong> — images may be loaded from Unsplash's content delivery network. <a href="https://unsplash.com/privacy" target="_blank" rel="noopener">Unsplash Privacy Policy</a>.</li>
+      <li><strong>Google Fonts</strong> — for typography. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</li>
+    </ul>
+    <p>We encourage you to review the privacy policies of these third parties for more information about their cookie practices.</p>
+
+    <h2>5. Your cookie choices</h2>
+    <p>You have several options for controlling or limiting cookies:</p>
+    <ul>
+      <li><strong>Browser settings:</strong> Most web browsers allow you to manage cookies through their settings. You can typically set your browser to refuse cookies, delete existing cookies, or alert you when a cookie is being set. Check your browser's "Help" or "Settings" section for instructions.</li>
+      <li><strong>Opt-out tools:</strong> For Google Analytics specifically, you can install the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a>.</li>
+      <li><strong>Do Not Track:</strong> Some browsers include a "Do Not Track" (DNT) feature. Our site does not currently respond to DNT signals, but you can still use the other control methods described here.</li>
+    </ul>
+    <p>Please note that if you disable or delete cookies, some parts of our website may not function properly, and your preferences may be lost.</p>
+
+    <h2>6. Consent</h2>
+    <p>By continuing to use our website, you consent to our use of cookies as described in this policy. When you first visit our site, you may see a cookie banner or notice that allows you to accept or manage your preferences. You can change your preferences at any time by clearing cookies in your browser and revisiting the site, or by adjusting your browser settings.</p>
+
+    <h2>7. Updates to this policy</h2>
+    <p>We may update this Cookies Policy from time to time to reflect changes in technology, regulation, or our practices. Any changes will be posted on this page with an updated "last updated" date. We encourage you to review this page periodically to stay informed about how we use cookies.</p>
+
+    <h2>8. More information</h2>
+    <p>If you have questions about our use of cookies or this policy, please:</p>
+    <ul>
+      <li>Email: <a href="mailto:privacy@abstractbuiltmatter.com">privacy@abstractbuiltmatter.com</a></li>
+      <li>Or use our <a href="contact.html">contact form</a>.</li>
+    </ul>
+    <p>For more general information about cookies and how to manage them, you may find resources like <a href="https://www.allaboutcookies.org" target="_blank" rel="noopener">allaboutcookies.org</a> helpful.</p>
+
+    <p style="margin-top: 2rem; font-size: 0.9rem; color: #666; border-top: 1px solid var(--line); padding-top: 1.5rem;">This policy is provided for informational purposes and does not constitute legal advice. For specific legal concerns, please consult a qualified attorney.</p>
+  </div>
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="editorial-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo" style="margin-bottom:8px;">
+          <div class="logo-mark" style="background:var(--ink); color:var(--paper);">A</div>
+          <div class="logo-text" style="font-size:1.4rem;">Abstract Built Matter</div>
+        </div>
+        <p>An independent journal of interior design and architecture. Published since 2019.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#">Interior Design</a></li>
+          <li><a href="#">Architecture</a></li>
+          <li><a href="#">Materials</a></li>
+          <li><a href="#">Lighting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Information</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Follow</h5>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Pinterest</a></li>
+          <li><a href="#">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Abstract Built Matter. All rights reserved.</span>
+      <div>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="cookies.html">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== SCHEMA MARKUP ========== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Cookies Policy · Abstract Built Matter",
+  "description": "How Abstract Built Matter uses cookies and similar tracking technologies.",
+  "url": "https://abstractbuiltmatter.com/cookies.html",
+  "about": {
+    "@type": "WebPage",
+    "name": "Cookies Policy",
+    "dateModified": "2025-04-14",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Abstract Built Matter"
+    }
+  }
+}
+</script>
+
+<!-- ========== JAVASCRIPT ========== -->
+<script>
+  (function() {
+    // ----- SEARCH TOGGLE -----
+    const searchToggle = document.getElementById('searchToggle');
+    const searchPanel = document.getElementById('searchPanel');
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+
+    searchToggle.addEventListener('click', function() {
+      searchPanel.classList.toggle('active');
+      if (searchPanel.classList.contains('active')) {
+        searchInput.focus();
+      }
+    });
+
+    // Demo search
+    function performSearch() {
+      const query = searchInput.value.trim();
+      if (query === '') {
+        alert('Please enter a search term.');
+      } else {
+        alert('Search demo: you searched for "' + query + '". In a real site, this would show results.');
+      }
+    }
+
+    searchButton.addEventListener('click', performSearch);
+    searchInput.addEventListener('keyup', function(e) {
+      if (e.key === 'Enter') performSearch();
+    });
+  })();
+</script>
+</body>
+</html>

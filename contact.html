@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact · Abstract Built Matter</title>
+  <meta name="description" content="Get in touch with the editorial team at Abstract Built Matter. Story tips, partnerships, or just to say hello.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact · Abstract Built Matter">
+  <meta property="og:description" content="Reach the editorial team — we read every message.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=630&fit=crop">
+  <meta property="og:url" content="https://abstractbuiltmatter.com/contact.html">
+  <link rel="canonical" href="https://abstractbuiltmatter.com/contact.html">
+  <!-- Fonts + Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --ink: #1a1a1a;
+      --paper: #f9f8f6;
+      --paper-alt: #f1efec;
+      --line: #ddd9d2;
+      --line-dark: #c2bbb2;
+      --accent: #9b7b5e;
+      --accent-deep: #6f5640;
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --max-width: 1380px;
+      --content-width: 820px;
+    }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 350;
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ----- TYPOGRAPHY ----- */
+    h1, h2, h3, h4 {
+      font-family: var(--serif);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    h1 { font-size: 3.2rem; }
+    h2 { font-size: 2.2rem; margin-bottom: 1.2rem; }
+    h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    h4 { font-size: 1.15rem; font-family: var(--sans); font-weight: 600; letter-spacing: -0.01em; }
+
+    a {
+      color: var(--ink);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    a:hover {
+      color: var(--accent-deep);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ----- LAYOUT ----- */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 60px;
+      align-items: start;
+    }
+
+    /* ----- HEADER ----- */
+    .blog-header {
+      border-bottom: 1px solid var(--line);
+      padding: 24px 0 16px;
+      background: var(--paper);
+      position: relative;
+      z-index: 10;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-mark {
+      width: 44px;
+      height: 44px;
+      background: var(--ink);
+      color: var(--paper);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      line-height: 1;
+      border-radius: 2px;
+      transform: rotate(-2deg);
+    }
+
+    .logo-text {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+
+    .logo-text span {
+      display: block;
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-top: 2px;
+    }
+
+    .main-nav ul {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+      font-size: 0.9rem;
+      font-weight: 450;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .main-nav a {
+      color: #3d3d3d;
+      font-size: 0.82rem;
+    }
+
+    .main-nav a:hover {
+      color: var(--accent-deep);
+    }
+
+    .search-trigger {
+      background: none;
+      border: 1px solid var(--line);
+      border-radius: 40px;
+      padding: 8px 18px;
+      font-size: 0.85rem;
+      font-family: var(--sans);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #4a4a4a;
+      transition: all 0.2s;
+    }
+
+    .search-trigger:hover {
+      background: var(--paper-alt);
+      border-color: var(--line-dark);
+    }
+
+    /* ----- SEARCH BAR (hidden until triggered) ----- */
+    .search-panel {
+      display: none;
+      padding: 16px 0 24px;
+      border-bottom: 1px solid var(--line);
+      background: var(--paper);
+    }
+
+    .search-panel.active {
+      display: block;
+    }
+
+    .search-inner {
+      display: flex;
+      gap: 12px;
+    }
+
+    .search-inner input {
+      flex: 1;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      background: white;
+      font-family: var(--sans);
+      font-size: 1rem;
+      border-radius: 2px;
+    }
+
+    .search-inner input:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .search-inner button {
+      padding: 0 28px;
+      background: var(--ink);
+      color: white;
+      border: none;
+      font-family: var(--sans);
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+
+    .search-inner button:hover {
+      background: var(--accent-deep);
+    }
+
+    /* ----- PAGE TITLE / HERO (contact) ----- */
+    .page-hero {
+      padding: 56px 0 32px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .page-hero h1 {
+      font-size: 3.4rem;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .page-hero .subhead {
+      font-size: 1.2rem;
+      color: #4a4a4a;
+      max-width: 720px;
+    }
+
+    /* ----- CONTACT LAYOUT ----- */
+    .contact-section {
+      padding: 48px 0 64px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .contact-form-block {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 40px 36px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+
+    .contact-form-block h2 {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+
+    .contact-form-block .form-intro {
+      font-size: 0.95rem;
+      color: #5a5a5a;
+      margin-bottom: 32px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+      color: #3d3d3d;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      border-radius: 2px;
+      transition: border 0.2s, background 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      background: white;
+    }
+
+    .form-group textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .form-group select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236f5640' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      cursor: pointer;
+    }
+
+    .form-submit {
+      background: var(--ink);
+      color: var(--paper);
+      border: none;
+      padding: 16px 40px;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: background 0.2s;
+      width: 100%;
+      margin-top: 8px;
+    }
+
+    .form-submit:hover {
+      background: var(--accent-deep);
+    }
+
+    .form-note {
+      font-size: 0.78rem;
+      color: #888;
+      margin-top: 18px;
+      text-align: center;
+    }
+
+    /* ----- CONTACT INFO SIDEBAR (right side) ----- */
+    .contact-info-block {
+      padding: 8px 0;
+    }
+
+    .contact-info-block .info-section {
+      margin-bottom: 42px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .contact-info-block .info-section:last-child {
+      border-bottom: none;
+    }
+
+    .contact-info-block h3 {
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #4b4b4b;
+      margin-bottom: 22px;
+    }
+
+    .contact-detail {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 22px;
+      align-items: flex-start;
+    }
+
+    .contact-detail i {
+      font-size: 1.1rem;
+      color: var(--accent);
+      width: 22px;
+      text-align: center;
+      margin-top: 4px;
+    }
+
+    .contact-detail .detail-text {
+      font-size: 0.98rem;
+    }
+
+    .contact-detail .detail-text strong {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .contact-detail .detail-text a {
+      border-bottom: 1px dotted var(--line-dark);
+    }
+
+    .contact-detail .detail-text a:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    .hours-list {
+      list-style: none;
+    }
+
+    .hours-list li {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.92rem;
+      padding: 8px 0;
+      border-bottom: 1px dotted var(--line);
+    }
+
+    .hours-list li:last-child {
+      border-bottom: none;
+    }
+
+    .hours-list .day {
+      font-weight: 500;
+    }
+
+    .hours-list .time {
+      color: #5f5f5f;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      color: #3d3d3d;
+      border: 1px solid var(--line);
+      padding: 10px 18px;
+      border-radius: 40px;
+      transition: all 0.2s;
+    }
+
+    .social-links a:hover {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
+
+    .social-links a i {
+      font-size: 0.9rem;
+      color: var(--accent);
+    }
+
+    .social-links a:hover i {
+      color: var(--paper);
+    }
+
+    /* ----- MAP / IMAGE BAND (small) ----- */
+    .contact-image-band {
+      margin-top: 48px;
+      border-radius: 4px;
+      overflow: hidden;
+      height: 240px;
+      background: var(--paper-alt);
+    }
+
+    .contact-image-band img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(20%) brightness(1.02);
+    }
+
+    /* ----- FAQ MINI (optional) ----- */
+    .mini-faq {
+      margin-top: 56px;
+      padding: 32px 0 16px;
+      border-top: 1px solid var(--line);
+    }
+
+    .mini-faq h3 {
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 24px;
+      color: #4b4b4b;
+    }
+
+    .mini-faq-item {
+      border-bottom: 1px solid var(--line);
+      padding: 14px 0;
+    }
+
+    .mini-faq-item .faq-q {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 1rem;
+      gap: 16px;
+    }
+
+    .mini-faq-item .faq-q i {
+      color: var(--accent);
+      font-size: 0.8rem;
+      transition: transform 0.2s;
+    }
+
+    .mini-faq-item .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      font-size: 0.92rem;
+      color: #3e3e3e;
+      padding-right: 24px;
+    }
+
+    .mini-faq-item.open .faq-a {
+      max-height: 200px;
+    }
+
+    .mini-faq-item.open .faq-q i {
+      transform: rotate(180deg);
+    }
+
+    /* ----- NEWSLETTER (small, reused) ----- */
+    .newsletter-compact {
+      background: var(--paper-alt);
+      padding: 32px 28px;
+      border-radius: 4px;
+      margin: 44px 0 16px;
+    }
+
+    .newsletter-compact h4 {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+
+    .newsletter-compact p {
+      font-size: 0.9rem;
+      color: #4f4f4f;
+      margin-bottom: 18px;
+    }
+
+    .newsletter-compact form {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .newsletter-compact input {
+      flex: 1;
+      min-width: 200px;
+      padding: 12px 16px;
+      border: 1px solid var(--line);
+      background: white;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      border-radius: 2px;
+    }
+
+    .newsletter-compact button {
+      padding: 12px 24px;
+      background: var(--ink);
+      color: white;
+      border: none;
+      font-family: var(--sans);
+      font-weight: 500;
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .newsletter-compact button:hover {
+      background: var(--accent-deep);
+    }
+
+    /* ----- FOOTER ----- */
+    .editorial-footer {
+      border-top: 1px solid var(--line);
+      padding: 56px 0 32px;
+      background: var(--paper-alt);
+      margin-top: 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand p {
+      font-size: 0.88rem;
+      color: #4d4d4d;
+      max-width: 280px;
+      margin-top: 12px;
+    }
+
+    .footer-col h5 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #5a5a5a;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col a {
+      font-size: 0.88rem;
+      color: #3d3d3d;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 0.78rem;
+      color: #777;
+    }
+
+    .footer-bottom a {
+      color: #555;
+      margin-left: 20px;
+    }
+
+    /* ----- RESPONSIVE ----- */
+    @media (max-width: 1024px) {
+      .content-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      h1 { font-size: 2.6rem; }
+      .page-hero h1 { font-size: 2.8rem; }
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .main-nav ul {
+        flex-wrap: wrap;
+        gap: 16px 24px;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      h1 { font-size: 2rem; }
+      .page-hero h1 { font-size: 2.2rem; }
+      .container { padding: 0 20px; }
+      .contact-form-block { padding: 28px 20px; }
+      .search-inner { flex-direction: column; }
+      .search-inner button { padding: 14px; }
+      .social-links a { padding: 8px 14px; font-size: 0.8rem; }
+    }
+
+    /* utility */
+    .hidden { display: none; }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+    }
+    .mt-2 { margin-top: 8px; }
+    .mb-2 { margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="blog-header">
+  <div class="container">
+    <div class="header-inner">
+      <div class="logo">
+        <div class="logo-mark">A</div>
+        <div class="logo-text">Abstract Built Matter<span>Interior · Architecture</span></div>
+      </div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="terms.html">Terms Of Privacy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookies.html">Cookies Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="categories.html">Categories</a></li>
+        </ul>
+      </nav>
+      <button class="search-trigger" id="searchToggle" aria-label="Open search">
+        <i class="fas fa-search"></i> Search
+      </button>
+    </div>
+  </div>
+  <!-- search panel -->
+  <div class="search-panel" id="searchPanel">
+    <div class="container">
+      <div class="search-inner">
+        <input type="text" id="searchInput" placeholder="Search articles, topics, or keywords..." aria-label="Search articles">
+        <button id="searchButton">Search</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ========== PAGE HERO (CONTACT) ========== -->
+<section class="page-hero">
+  <div class="container">
+    <h1>Let’s talk</h1>
+    <p class="subhead">Pitch a story, ask about our editorial guidelines, or just say hello. We read every message and aim to reply within two business days.</p>
+  </div>
+</section>
+
+<!-- ========== MAIN CONTACT CONTENT ========== -->
+<main class="container contact-section">
+  <div class="contact-grid">
+    <!-- LEFT: CONTACT FORM -->
+    <div class="contact-form-block">
+      <h2>Send a message</h2>
+      <p class="form-intro">Fields marked with an asterisk (*) are required. We’ll never share your details.</p>
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="name">Full name *</label>
+          <input type="text" id="name" name="name" placeholder="e.g. Alex Rivera" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email address *</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject">
+            <option value="general">General inquiry</option>
+            <option value="pitch">Story pitch / submission</option>
+            <option value="partnership">Partnership or advertising</option>
+            <option value="feedback">Feedback on an article</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" placeholder="Tell us what’s on your mind…" required></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send message</button>
+        <p class="form-note">By submitting, you agree to our privacy policy. This is a demo — no data is stored.</p>
+      </form>
+    </div>
+
+    <!-- RIGHT: CONTACT INFO + HOURS + SOCIAL + SMALL FAQ -->
+    <div class="contact-info-block">
+      <div class="info-section">
+        <h3>Editorial office</h3>
+        <div class="contact-detail">
+          <i class="fas fa-map-pin"></i>
+          <div class="detail-text">
+            <strong>Abstract Built Matter</strong>
+            412 Design District, Studio 7<br>
+            Brooklyn, NY 11205
+          </div>
+        </div>
+        <div class="contact-detail">
+          <i class="fas fa-envelope"></i>
+          <div class="detail-text">
+            <strong>General inquiries</strong>
+            <a href="mailto:hello@abstractbuiltmatter.com">hello@abstractbuiltmatter.com</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <i class="fas fa-phone-alt"></i>
+          <div class="detail-text">
+            <strong>Phone</strong>
+            <a href="tel:+15551234567">+1 (555) 123‑4567</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-section">
+        <h3>Office hours</h3>
+        <ul class="hours-list">
+          <li><span class="day">Monday – Thursday</span><span class="time">9:00 – 18:00 EST</span></li>
+          <li><span class="day">Friday</span><span class="time">9:00 – 16:00 EST</span></li>
+          <li><span class="day">Saturday – Sunday</span><span class="time">Closed</span></li>
+        </ul>
+      </div>
+
+      <div class="info-section">
+        <h3>Follow</h3>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i> Pinterest</a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+        </div>
+      </div>
+
+      <!-- mini FAQ inside sidebar -->
+      <div class="mini-faq">
+        <h3>Quick answers</h3>
+        <div class="mini-faq-item">
+          <div class="faq-q">
+            <span>Do you accept guest posts?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-a">
+            <p>We occasionally publish contributed articles from architects, designers, and researchers. Please send a short pitch (150 words) and a link to previous work.</p>
+          </div>
+        </div>
+        <div class="mini-faq-item">
+          <div class="faq-q">
+            <span>How can I advertise?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-a">
+            <p>We offer limited sponsorships and display placements. Contact us with “Partnership” in the subject line for our media kit.</p>
+          </div>
+        </div>
+        <div class="mini-faq-item">
+          <div class="faq-q">
+            <span>Can I republish an article?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-a">
+            <p>Unless otherwise noted, all content is copyrighted. For syndication requests, email us with the article URL and details of your publication.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SMALL IMAGE BAND (contact ambiance) -->
+  <div class="contact-image-band">
+    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&h=400&fit=crop" alt="Minimalist office space with wooden table and soft natural light" loading="lazy">
+  </div>
+
+  <!-- NEWSLETTER COMPACT -->
+  <div class="newsletter-compact">
+    <h4>Stay in the loop</h4>
+    <p>Weekly digest of new essays, project tours, and material innovations.</p>
+    <form id="newsletterCompactForm">
+      <input type="email" placeholder="Your email address" required aria-label="Email address">
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="editorial-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo" style="margin-bottom:8px;">
+          <div class="logo-mark" style="background:var(--ink); color:var(--paper);">A</div>
+          <div class="logo-text" style="font-size:1.4rem;">Abstract Built Matter</div>
+        </div>
+        <p>An independent journal of interior design and architecture. Published since 2019.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#">Interior Design</a></li>
+          <li><a href="#">Architecture</a></li>
+          <li><a href="#">Materials</a></li>
+          <li><a href="#">Lighting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Information</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Follow</h5>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Pinterest</a></li>
+          <li><a href="#">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Abstract Built Matter. All rights reserved.</span>
+      <div>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="cookies.html">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== SCHEMA MARKUP (ContactPage) ========== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Abstract Built Matter",
+  "description": "Get in touch with the editorial team at Abstract Built Matter.",
+  "url": "https://abstractbuiltmatter.com/contact.html",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Abstract Built Matter",
+    "email": "hello@abstractbuiltmatter.com",
+    "telephone": "+1-555-123-4567",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "412 Design District, Studio 7",
+      "addressLocality": "Brooklyn",
+      "addressRegion": "NY",
+      "postalCode": "11205",
+      "addressCountry": "US"
+    }
+  }
+}
+</script>
+
+<!-- ========== JAVASCRIPT ========== -->
+<script>
+  (function() {
+    // ----- SEARCH TOGGLE -----
+    const searchToggle = document.getElementById('searchToggle');
+    const searchPanel = document.getElementById('searchPanel');
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+
+    searchToggle.addEventListener('click', function() {
+      searchPanel.classList.toggle('active');
+      if (searchPanel.classList.contains('active')) {
+        searchInput.focus();
+      }
+    });
+
+    // Demo search (just an alert on this page)
+    function performSearch() {
+      const query = searchInput.value.trim();
+      if (query === '') {
+        alert('Please enter a search term.');
+      } else {
+        alert('Search demo: you searched for "' + query + '". In a real site, this would show results.');
+      }
+    }
+
+    searchButton.addEventListener('click', performSearch);
+    searchInput.addEventListener('keyup', function(e) {
+      if (e.key === 'Enter') performSearch();
+    });
+
+    // ----- MINI FAQ ACCORDION (contact page) -----
+    document.querySelectorAll('.mini-faq-item .faq-q').forEach(question => {
+      question.addEventListener('click', function() {
+        const item = this.parentElement;
+        item.classList.toggle('open');
+      });
+    });
+
+    // ----- CONTACT FORM (prevent default, show message) -----
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+        if (!name || !email || !message) {
+          alert('Please fill in all required fields (*).');
+          return;
+        }
+        alert('Thank you, ' + name + '. Your message has been received. (This is a demo — no actual email was sent.)');
+        contactForm.reset();
+      });
+    }
+
+    // ----- NEWSLETTER COMPACT (prevent default) -----
+    const newsletterCompact = document.getElementById('newsletterCompactForm');
+    if (newsletterCompact) {
+      newsletterCompact.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const input = this.querySelector('input');
+        alert('Thank you for subscribing to our newsletter. (Demo only.)');
+        input.value = '';
+      });
+    }
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Privacy · Abstract Built Matter</title>
+  <meta name="description" content="Terms of Privacy for Abstract Built Matter — an independent journal of interior design and architecture. Read our terms, privacy policy, and cookie usage.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Terms of Privacy · Abstract Built Matter">
+  <meta property="og:description" content="Terms of Privacy for Abstract Built Matter. Read our terms, privacy policy, and cookie usage.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=630&fit=crop">
+  <meta property="og:url" content="https://abstractbuiltmatter.com/terms.html">
+  <link rel="canonical" href="https://abstractbuiltmatter.com/terms.html">
+  <!-- Fonts + Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --ink: #1a1a1a;
+      --paper: #f9f8f6;
+      --paper-alt: #f1efec;
+      --line: #ddd9d2;
+      --line-dark: #c2bbb2;
+      --accent: #9b7b5e;
+      --accent-deep: #6f5640;
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --max-width: 1380px;
+      --content-width: 820px;
+    }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 350;
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ----- TYPOGRAPHY ----- */
+    h1, h2, h3, h4 {
+      font-family: var(--serif);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    h1 { font-size: 3.2rem; }
+    h2 { font-size: 2.2rem; margin-bottom: 1.2rem; }
+    h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    h4 { font-size: 1.15rem; font-family: var(--sans); font-weight: 600; letter-spacing: -0.01em; }
+
+    a {
+      color: var(--ink);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    a:hover {
+      color: var(--accent-deep);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ----- LAYOUT ----- */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* ----- HEADER ----- */
+    .blog-header {
+      border-bottom: 1px solid var(--line);
+      padding: 24px 0 16px;
+      background: var(--paper);
+      position: relative;
+      z-index: 10;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-mark {
+      width: 44px;
+      height: 44px;
+      background: var(--ink);
+      color: var(--paper);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      line-height: 1;
+      border-radius: 2px;
+      transform: rotate(-2deg);
+    }
+
+    .logo-text {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+
+    .logo-text span {
+      display: block;
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-top: 2px;
+    }
+
+    .main-nav ul {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+      font-size: 0.9rem;
+      font-weight: 450;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .main-nav a {
+      color: #3d3d3d;
+      font-size: 0.82rem;
+    }
+
+    .main-nav a:hover {
+      color: var(--accent-deep);
+    }
+
+    .search-trigger {
+      background: none;
+      border: 1px solid var(--line);
+      border-radius: 40px;
+      padding: 8px 18px;
+      font-size: 0.85rem;
+      font-family: var(--sans);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #4a4a4a;
+      transition: all 0.2s;
+    }
+
+    .search-trigger:hover {
+      background: var(--paper-alt);
+      border-color: var(--line-dark);
+    }
+
+    /* ----- SEARCH PANEL ----- */
+    .search-panel {
+      display: none;
+      padding: 16px 0 24px;
+      border-bottom: 1px solid var(--line);
+      background: var(--paper);
+    }
+
+    .search-panel.active {
+      display: block;
+    }
+
+    .search-inner {
+      display: flex;
+      gap: 12px;
+    }
+
+    .search-inner input {
+      flex: 1;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      background: white;
+      font-family: var(--sans);
+      font-size: 1rem;
+      border-radius: 2px;
+    }
+
+    .search-inner input:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .search-inner button {
+      padding: 0 28px;
+      background: var(--ink);
+      color: white;
+      border: none;
+      font-family: var(--sans);
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+
+    .search-inner button:hover {
+      background: var(--accent-deep);
+    }
+
+    /* ----- PAGE CONTENT ----- */
+    .page-header {
+      padding: 56px 0 32px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 48px;
+    }
+
+    .page-header h1 {
+      font-size: 3.6rem;
+      margin-bottom: 12px;
+      letter-spacing: -0.03em;
+    }
+
+    .page-header .subhead {
+      font-size: 1.2rem;
+      color: #4a4a4a;
+      max-width: 700px;
+      font-weight: 350;
+      line-height: 1.6;
+    }
+
+    .terms-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 64px;
+      align-items: start;
+      margin-bottom: 72px;
+    }
+
+    .terms-content h2 {
+      font-size: 2rem;
+      margin-top: 48px;
+      margin-bottom: 20px;
+    }
+
+    .terms-content h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .terms-content h3 {
+      font-size: 1.3rem;
+      margin-top: 32px;
+      margin-bottom: 14px;
+    }
+
+    .terms-content p {
+      font-size: 1.05rem;
+      color: #2e2e2e;
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+
+    .terms-content ul, .terms-content ol {
+      margin-bottom: 24px;
+      padding-left: 28px;
+      color: #2e2e2e;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .terms-content li {
+      margin-bottom: 8px;
+    }
+
+    .terms-content strong {
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .terms-content .highlight-box {
+      background: var(--paper-alt);
+      border-left: 3px solid var(--accent);
+      padding: 24px 28px;
+      margin: 32px 0;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .terms-content .highlight-box p {
+      margin-bottom: 0;
+      font-size: 1rem;
+      color: #3d3d3d;
+    }
+
+    .terms-content .highlight-box strong {
+      color: var(--accent-deep);
+    }
+
+    /* Sidebar */
+    .sidebar-terms {
+      position: sticky;
+      top: 24px;
+    }
+
+    .sidebar-widget {
+      margin-bottom: 44px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .sidebar-widget:last-child {
+      border-bottom: none;
+    }
+
+    .sidebar-widget h4 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #4b4b4b;
+    }
+
+    .sidebar-widget ul {
+      list-style: none;
+    }
+
+    .sidebar-widget li {
+      margin-bottom: 14px;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .sidebar-widget li a {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dotted var(--line);
+      padding-bottom: 8px;
+    }
+
+    .sidebar-widget .contact-info {
+      font-size: 0.9rem;
+      color: #3d3d3d;
+      line-height: 1.6;
+    }
+
+    .sidebar-widget .contact-info a {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .editor-note {
+      background: var(--paper-alt);
+      padding: 32px 28px;
+      border-radius: 4px;
+      margin-top: 20px;
+    }
+
+    .editor-note p {
+      font-size: 0.92rem;
+      font-style: italic;
+      color: #3d3d3d;
+      line-height: 1.7;
+    }
+
+    .editor-note .editor-name {
+      font-style: normal;
+      font-weight: 600;
+      margin-top: 14px;
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+    }
+
+    .toc-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .toc-list li {
+      margin-bottom: 10px;
+    }
+
+    .toc-list a {
+      font-size: 0.9rem;
+      color: #3d3d3d;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toc-list a:hover {
+      color: var(--accent-deep);
+    }
+
+    .toc-list .toc-num {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      color: var(--accent);
+      min-width: 28px;
+    }
+
+    /* ----- NEWSLETTER ----- */
+    .newsletter-block {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px;
+      border-radius: 6px;
+      margin: 56px 0 32px;
+    }
+
+    .newsletter-block h3 {
+      color: var(--paper);
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+
+    .newsletter-block p {
+      color: #b9b2a8;
+      margin-bottom: 24px;
+      font-size: 0.95rem;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      min-width: 240px;
+      padding: 14px 18px;
+      border: none;
+      border-radius: 2px;
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      background: #2b2b2b;
+      color: white;
+    }
+
+    .newsletter-form input::placeholder {
+      color: #8a837b;
+    }
+
+    .newsletter-form button {
+      padding: 14px 32px;
+      background: var(--accent);
+      color: var(--ink);
+      border: none;
+      font-weight: 600;
+      font-family: var(--sans);
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+
+    .newsletter-form button:hover {
+      background: #b18f6f;
+    }
+
+    /* ----- FOOTER ----- */
+    .editorial-footer {
+      border-top: 1px solid var(--line);
+      padding: 56px 0 32px;
+      background: var(--paper-alt);
+      margin-top: 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand p {
+      font-size: 0.88rem;
+      color: #4d4d4d;
+      max-width: 280px;
+      margin-top: 12px;
+    }
+
+    .footer-col h5 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #5a5a5a;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col a {
+      font-size: 0.88rem;
+      color: #3d3d3d;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 0.78rem;
+      color: #777;
+    }
+
+    .footer-bottom a {
+      color: #555;
+      margin-left: 20px;
+    }
+
+    /* ----- RESPONSIVE ----- */
+    @media (max-width: 1024px) {
+      .terms-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .sidebar-terms {
+        position: static;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      h1 { font-size: 2.6rem; }
+      .page-header h1 { font-size: 2.8rem; }
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .main-nav ul {
+        flex-wrap: wrap;
+        gap: 16px 24px;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      h1 { font-size: 2rem; }
+      .page-header h1 { font-size: 2.2rem; }
+      .container { padding: 0 20px; }
+      .newsletter-block { padding: 32px 24px; }
+      .search-inner { flex-direction: column; }
+      .search-inner button { padding: 14px; }
+      .terms-content ul, .terms-content ol { padding-left: 20px; }
+      .terms-content .highlight-box { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="blog-header">
+  <div class="container">
+    <div class="header-inner">
+      <div class="logo">
+        <div class="logo-mark">A</div>
+        <div class="logo-text">Abstract Built Matter<span>Interior · Architecture</span></div>
+      </div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="terms.html">Terms Of Privacy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookies.html">Cookies Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="categories.html">Categories</a></li>
+        </ul>
+      </nav>
+      <button class="search-trigger" id="searchToggle" aria-label="Open search">
+        <i class="fas fa-search"></i> Search
+      </button>
+    </div>
+  </div>
+  <!-- search panel -->
+  <div class="search-panel" id="searchPanel">
+    <div class="container">
+      <div class="search-inner">
+        <input type="text" id="searchInput" placeholder="Search articles, topics, or keywords..." aria-label="Search articles">
+        <button id="searchButton">Search</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ========== MAIN CONTENT ========== -->
+<main class="container main-content">
+  <!-- Page Header -->
+  <div class="page-header">
+    <h1>Terms of Privacy</h1>
+    <p class="subhead">Last updated: 15 March 2025. Please read these terms carefully before using Abstract Built Matter. Your access to and use of our website constitutes acceptance of these terms.</p>
+  </div>
+
+  <!-- Terms Grid -->
+  <div class="terms-grid">
+    <!-- Main Content -->
+    <div class="terms-content">
+      <h2 id="introduction">1. Introduction</h2>
+      <p>Welcome to <strong>Abstract Built Matter</strong> ("we", "our", "us"). These Terms of Privacy govern your use of our website located at <a href="https://abstractbuiltmatter.com">abstractbuiltmatter.com</a> (the "Site") and any related services, content, or features offered by us.</p>
+      <p>By accessing or using the Site, you agree to be bound by these Terms. If you do not agree with any part of these Terms, you must not use the Site. We reserve the right to update or modify these Terms at any time without prior notice. Your continued use of the Site after any changes constitutes acceptance of the new Terms.</p>
+
+      <div class="highlight-box">
+        <p><strong>Summary:</strong> We are an independent journal. We respect your privacy, we don't sell your data, and we expect you to use our content responsibly. The details are below.</p>
+      </div>
+
+      <h2 id="use-of-content">2. Use of Content</h2>
+      <p>All content published on Abstract Built Matter — including but not limited to articles, essays, photographs, illustrations, graphics, logos, and design elements — is the intellectual property of Abstract Built Matter or its content suppliers and is protected by international copyright, trademark, and other intellectual property laws.</p>
+      <p>You may:</p>
+      <ul>
+        <li>Read, share, and link to our content for personal, non-commercial purposes.</li>
+        <li>Quote short excerpts (up to 100 words) with clear attribution and a link back to the original article.</li>
+        <li>Print or download content for personal, non-commercial use only.</li>
+      </ul>
+      <p>You may <strong>not</strong>:</p>
+      <ul>
+        <li>Reproduce, republish, or redistribute our content in full or in substantial part without prior written permission.</li>
+        <li>Use our content for commercial purposes, including advertising, product endorsement, or resale.</li>
+        <li>Modify, alter, or create derivative works based on our content without explicit permission.</li>
+        <li>Use automated systems (bots, scrapers) to harvest content from the Site.</li>
+      </ul>
+      <p>To request permission for reuse, please contact us at <a href="mailto:hello@abstractbuiltmatter.com">hello@abstractbuiltmatter.com</a>.</p>
+
+      <h2 id="privacy-policy">3. Privacy Policy</h2>
+      <p>Your privacy is important to us. This section explains what personal data we collect, how we use it, and your rights regarding that data.</p>
+
+      <h3>3.1 Information We Collect</h3>
+      <p>We collect minimal data to operate the Site and improve your experience:</p>
+      <ul>
+        <li><strong>Usage Data:</strong> We use privacy-respecting analytics to understand how visitors interact with the Site (pages visited, time on page, referral source). This data is aggregated and anonymized.</li>
+        <li><strong>Newsletter Subscription:</strong> If you subscribe to our newsletter, we collect your email address. You may unsubscribe at any time via the link in every email.</li>
+        <li><strong>Contact Information:</strong> If you contact us via email, we retain your message and email address to respond to your inquiry.</li>
+        <li><strong>Cookies:</strong> We use essential cookies to ensure the Site functions properly. We do not use tracking cookies for advertising. See our <a href="cookies.html">Cookies Policy</a> for details.</li>
+      </ul>
+
+      <h3>3.2 How We Use Your Information</h3>
+      <ul>
+        <li>To operate, maintain, and improve the Site.</li>
+        <li>To send our newsletter if you have opted in.</li>
+        <li>To respond to your inquiries and requests.</li>
+        <li>To comply with legal obligations.</li>
+      </ul>
+
+      <h3>3.3 Data Sharing</h3>
+      <p>We do <strong>not</strong> sell, rent, or trade your personal data to third parties. We may share data only in the following limited circumstances:</p>
+      <ul>
+        <li>With service providers who assist in operating the Site (e.g., email delivery services), bound by confidentiality agreements.</li>
+        <li>When required by law, regulation, or legal process.</li>
+        <li>To protect the rights, property, or safety of Abstract Built Matter, our readers, or the public.</li>
+      </ul>
+
+      <h3>3.4 Your Rights</h3>
+      <p>Depending on your jurisdiction, you may have the right to access, correct, delete, or restrict processing of your personal data. To exercise any of these rights, please contact us at <a href="mailto:hello@abstractbuiltmatter.com">hello@abstractbuiltmatter.com</a>.</p>
+
+      <h2 id="cookies">4. Cookies Policy</h2>
+      <p>We use essential cookies to make our Site work. These are small text files stored on your device that help us remember your preferences and ensure the Site functions correctly. We do not use advertising or tracking cookies.</p>
+      <p>You can control and manage cookies through your browser settings. Disabling cookies may affect the functionality of the Site. For more information, please see our full <a href="cookies.html">Cookies Policy</a>.</p>
+
+      <h2 id="third-party">5. Third-Party Links</h2>
+      <p>The Site may contain links to third-party websites, services, or resources. These links are provided for your convenience and do not imply endorsement. We have no control over the content, privacy policies, or practices of third-party sites and assume no responsibility for them. We encourage you to review the terms and privacy policies of any third-party site you visit.</p>
+
+      <h2 id="disclaimer">6. Disclaimer</h2>
+      <p>The content on Abstract Built Matter is provided for general informational and educational purposes only. While we strive for accuracy and rigour, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, or suitability of the information contained on the Site.</p>
+      <p>Any reliance you place on such information is strictly at your own risk. In no event will we be liable for any loss or damage arising from the use of this Site or reliance on its content.</p>
+      <p>Design, architecture, and construction involve inherent risks. Always consult qualified professionals before undertaking any project. See our full <a href="disclaimer.html">Disclaimer</a> for details.</p>
+
+      <h2 id="limitation">7. Limitation of Liability</h2>
+      <p>To the fullest extent permitted by law, Abstract Built Matter, its editors, contributors, and affiliates shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of the Site, including but not limited to loss of data, revenue, or profits.</p>
+      <p>Our total liability for any claim arising from your use of the Site shall not exceed the amount you paid, if any, to access the Site.</p>
+
+      <h2 id="governing-law">8. Governing Law</h2>
+      <p>These Terms shall be governed by and construed in accordance with the laws of the State of New York, United States, without regard to its conflict of law principles. Any dispute arising from these Terms or your use of the Site shall be resolved exclusively in the state or federal courts located in New York County, New York.</p>
+
+      <h2 id="changes">9. Changes to These Terms</h2>
+      <p>We may update these Terms of Privacy from time to time to reflect changes in our practices, technology, or legal requirements. We will indicate the date of the latest revision at the top of this page. We encourage you to review this page periodically.</p>
+      <p>Your continued use of the Site after any changes constitutes your acceptance of the updated Terms.</p>
+
+      <h2 id="contact">10. Contact Us</h2>
+      <p>If you have any questions, concerns, or requests regarding these Terms of Privacy, please contact us:</p>
+      <p>
+        <strong>Abstract Built Matter</strong><br>
+        Email: <a href="mailto:hello@abstractbuiltmatter.com">hello@abstractbuiltmatter.com</a><br>
+        Editorial inquiries: <a href="mailto:editors@abstractbuiltmatter.com">editors@abstractbuiltmatter.com</a>
+      </p>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar-terms">
+      <div class="sidebar-widget">
+        <h4>On This Page</h4>
+        <ul class="toc-list">
+          <li><a href="#introduction"><span class="toc-num">1.</span> Introduction</a></li>
+          <li><a href="#use-of-content"><span class="toc-num">2.</span> Use of Content</a></li>
+          <li><a href="#privacy-policy"><span class="toc-num">3.</span> Privacy Policy</a></li>
+          <li><a href="#cookies"><span class="toc-num">4.</span> Cookies Policy</a></li>
+          <li><a href="#third-party"><span class="toc-num">5.</span> Third-Party Links</a></li>
+          <li><a href="#disclaimer"><span class="toc-num">6.</span> Disclaimer</a></li>
+          <li><a href="#limitation"><span class="toc-num">7.</span> Limitation of Liability</a></li>
+          <li><a href="#governing-law"><span class="toc-num">8.</span> Governing Law</a></li>
+          <li><a href="#changes"><span class="toc-num">9.</span> Changes to These Terms</a></li>
+          <li><a href="#contact"><span class="toc-num">10.</span> Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-widget">
+        <h4>Related Policies</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy <span>→</span></a></li>
+          <li><a href="cookies.html">Cookies Policy <span>→</span></a></li>
+          <li><a href="disclaimer.html">Disclaimer <span>→</span></a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-widget">
+        <h4>Contact</h4>
+        <div class="contact-info">
+          <p style="margin-bottom:12px;">For questions about these terms:</p>
+          <p><a href="mailto:hello@abstractbuiltmatter.com">hello@abstractbuiltmatter.com</a></p>
+        </div>
+      </div>
+
+      <div class="editor-note">
+        <p>“We believe good design is a form of quiet activism — it shapes how we live, connect, and care for the planet.”</p>
+        <div class="editor-name">— Lena Ortiz, Editor-in-Chief</div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Newsletter -->
+  <div class="newsletter-block">
+    <h3>Stay inspired</h3>
+    <p>Get our weekly digest of new articles, project tours, and design thinking — no noise, just substance.</p>
+    <form class="newsletter-form" id="newsletterForm">
+      <input type="email" placeholder="Your email address" required aria-label="Email address">
+      <button type="submit">Subscribe</button>
+    </form>
+    <p style="font-size:0.78rem; margin-top:16px; color:#8a837b;">We respect your inbox. Unsubscribe anytime.</p>
+  </div>
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="editorial-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo" style="margin-bottom:8px;">
+          <div class="logo-mark" style="background:var(--ink); color:var(--paper);">A</div>
+          <div class="logo-text" style="font-size:1.4rem;">Abstract Built Matter</div>
+        </div>
+        <p>An independent journal of interior design and architecture. Published since 2019.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#">Interior Design</a></li>
+          <li><a href="#">Architecture</a></li>
+          <li><a href="#">Materials</a></li>
+          <li><a href="#">Lighting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Information</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Follow</h5>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Pinterest</a></li>
+          <li><a href="#">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Abstract Built Matter. All rights reserved.</span>
+      <div>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="cookies.html">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== SCHEMA MARKUP ========== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Terms of Privacy · Abstract Built Matter",
+  "description": "Terms of Privacy for Abstract Built Matter — an independent journal of interior design and architecture.",
+  "url": "https://abstractbuiltmatter.com/terms.html",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Abstract Built Matter"
+  }
+}
+</script>
+
+<!-- ========== JAVASCRIPT ========== -->
+<script>
+  (function() {
+    // ----- SEARCH TOGGLE -----
+    const searchToggle = document.getElementById('searchToggle');
+    const searchPanel = document.getElementById('searchPanel');
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+
+    searchToggle.addEventListener('click', function() {
+      searchPanel.classList.toggle('active');
+      if (searchPanel.classList.contains('active')) {
+        searchInput.focus();
+      }
+    });
+
+    function performSearch() {
+      const query = searchInput.value.trim().toLowerCase();
+      if (query === '') return;
+      alert('Search is available on the homepage. (Demo)');
+    }
+
+    searchButton.addEventListener('click', performSearch);
+    searchInput.addEventListener('keyup', function(e) {
+      if (e.key === 'Enter') performSearch();
+    });
+
+    // ----- NEWSLETTER FORM -----
+    const newsletterForm = document.getElementById('newsletterForm');
+    if (newsletterForm) {
+      newsletterForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const input = this.querySelector('input');
+        alert('Thank you for subscribing. (Demo — no data sent.)');
+        input.value = '';
+      });
+    }
+
+    // ----- SMOOTH SCROLL FOR TOC LINKS -----
+    document.querySelectorAll('.toc-list a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetEl = document.getElementById(targetId);
+        if (targetEl) {
+          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  })();
+</script>
+</body>
+</html>

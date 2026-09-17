@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disclaimer · Abstract Built Matter</title>
+  <meta name="description" content="Disclaimer for Abstract Built Matter — general information, professional advice, external links, and liability limitations.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Disclaimer · Abstract Built Matter">
+  <meta property="og:description" content="Important disclaimers regarding the content and use of Abstract Built Matter.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=630&fit=crop">
+  <meta property="og:url" content="https://abstractbuiltmatter.com/disclaimer.html">
+  <link rel="canonical" href="https://abstractbuiltmatter.com/disclaimer.html">
+  <!-- Fonts + Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --ink: #1a1a1a;
+      --paper: #f9f8f6;
+      --paper-alt: #f1efec;
+      --line: #ddd9d2;
+      --line-dark: #c2bbb2;
+      --accent: #9b7b5e;
+      --accent-deep: #6f5640;
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --max-width: 1380px;
+      --content-width: 820px;
+    }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 350;
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--serif);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    h1 { font-size: 3.2rem; }
+    h2 { font-size: 2.2rem; margin-bottom: 1.2rem; }
+    h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    h4 { font-size: 1.15rem; font-family: var(--sans); font-weight: 600; letter-spacing: -0.01em; }
+
+    a {
+      color: var(--ink);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    a:hover {
+      color: var(--accent-deep);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* ----- HEADER ----- */
+    .blog-header {
+      border-bottom: 1px solid var(--line);
+      padding: 24px 0 16px;
+      background: var(--paper);
+      position: relative;
+      z-index: 10;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-mark {
+      width: 44px;
+      height: 44px;
+      background: var(--ink);
+      color: var(--paper);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      line-height: 1;
+      border-radius: 2px;
+      transform: rotate(-2deg);
+    }
+
+    .logo-text {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+
+    .logo-text span {
+      display: block;
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-top: 2px;
+    }
+
+    .main-nav ul {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+      font-size: 0.9rem;
+      font-weight: 450;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .main-nav a {
+      color: #3d3d3d;
+      font-size: 0.82rem;
+    }
+
+    .main-nav a:hover {
+      color: var(--accent-deep);
+    }
+
+    .search-trigger {
+      background: none;
+      border: 1px solid var(--line);
+      border-radius: 40px;
+      padding: 8px 18px;
+      font-size: 0.85rem;
+      font-family: var(--sans);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #4a4a4a;
+      transition: all 0.2s;
+    }
+
+    .search-trigger:hover {
+      background: var(--paper-alt);
+      border-color: var(--line-dark);
+    }
+
+    /* ----- SEARCH BAR (hidden until triggered) ----- */
+    .search-panel {
+      display: none;
+      padding: 16px 0 24px;
+      border-bottom: 1px solid var(--line);
+      background: var(--paper);
+    }
+
+    .search-panel.active {
+      display: block;
+    }
+
+    .search-inner {
+      display: flex;
+      gap: 12px;
+    }
+
+    .search-inner input {
+      flex: 1;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      background: white;
+      font-family: var(--sans);
+      font-size: 1rem;
+      border-radius: 2px;
+    }
+
+    .search-inner input:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .search-inner button {
+      padding: 0 28px;
+      background: var(--ink);
+      color: white;
+      border: none;
+      font-family: var(--sans);
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+
+    .search-inner button:hover {
+      background: var(--accent-deep);
+    }
+
+    /* ----- PAGE HERO ----- */
+    .page-hero {
+      padding: 56px 0 32px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .page-hero h1 {
+      font-size: 3.4rem;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .page-hero .subhead {
+      font-size: 1.2rem;
+      color: #4a4a4a;
+      max-width: 720px;
+    }
+
+    /* ----- DISCLAIMER CONTENT (single column) ----- */
+    .disclaimer-section {
+      padding: 48px 0 64px;
+    }
+
+    .disclaimer-content {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 48px 52px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+
+    .disclaimer-content h2 {
+      font-size: 1.8rem;
+      margin-top: 2.2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .disclaimer-content h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .disclaimer-content h3 {
+      font-family: var(--sans);
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin: 1.8rem 0 0.8rem;
+      letter-spacing: -0.01em;
+    }
+
+    .disclaimer-content p {
+      margin-bottom: 1.2rem;
+      color: #2a2a2a;
+    }
+
+    .disclaimer-content ul, .disclaimer-content ol {
+      margin: 0 0 1.5rem 1.5rem;
+      color: #2a2a2a;
+    }
+
+    .disclaimer-content li {
+      margin-bottom: 0.5rem;
+    }
+
+    .disclaimer-content a {
+      border-bottom: 1px dotted var(--line-dark);
+    }
+
+    .disclaimer-content a:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    .disclaimer-content .disclaimer-meta {
+      font-size: 0.9rem;
+      color: #666;
+      font-style: italic;
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .disclaimer-content .highlight-box {
+      background: var(--paper-alt);
+      padding: 24px 28px;
+      border-radius: 4px;
+      margin: 2rem 0 1.5rem;
+      border-left: 4px solid var(--accent);
+      font-size: 0.98rem;
+    }
+
+    /* ----- FOOTER ----- */
+    .editorial-footer {
+      border-top: 1px solid var(--line);
+      padding: 56px 0 32px;
+      background: var(--paper-alt);
+      margin-top: 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand p {
+      font-size: 0.88rem;
+      color: #4d4d4d;
+      max-width: 280px;
+      margin-top: 12px;
+    }
+
+    .footer-col h5 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #5a5a5a;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col a {
+      font-size: 0.88rem;
+      color: #3d3d3d;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 0.78rem;
+      color: #777;
+    }
+
+    .footer-bottom a {
+      color: #555;
+      margin-left: 20px;
+    }
+
+    /* ----- RESPONSIVE ----- */
+    @media (max-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      h1 { font-size: 2.6rem; }
+      .page-hero h1 { font-size: 2.8rem; }
+      .disclaimer-content {
+        padding: 36px 28px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .main-nav ul {
+        flex-wrap: wrap;
+        gap: 16px 24px;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      h1 { font-size: 2rem; }
+      .page-hero h1 { font-size: 2.2rem; }
+      .container { padding: 0 20px; }
+      .search-inner { flex-direction: column; }
+      .search-inner button { padding: 14px; }
+      .disclaimer-content {
+        padding: 28px 20px;
+      }
+      .disclaimer-content h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    /* utility */
+    .hidden { display: none; }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+    }
+    .mt-2 { margin-top: 8px; }
+    .mb-2 { margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="blog-header">
+  <div class="container">
+    <div class="header-inner">
+      <div class="logo">
+        <div class="logo-mark">A</div>
+        <div class="logo-text">Abstract Built Matter<span>Interior · Architecture</span></div>
+      </div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="terms.html">Terms Of Privacy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookies.html">Cookies Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="categories.html">Categories</a></li>
+        </ul>
+      </nav>
+      <button class="search-trigger" id="searchToggle" aria-label="Open search">
+        <i class="fas fa-search"></i> Search
+      </button>
+    </div>
+  </div>
+  <!-- search panel -->
+  <div class="search-panel" id="searchPanel">
+    <div class="container">
+      <div class="search-inner">
+        <input type="text" id="searchInput" placeholder="Search articles, topics, or keywords..." aria-label="Search articles">
+        <button id="searchButton">Search</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ========== PAGE HERO ========== -->
+<section class="page-hero">
+  <div class="container">
+    <h1>Disclaimer</h1>
+    <p class="subhead">Important information about the content on Abstract Built Matter — please read carefully.</p>
+  </div>
+</section>
+
+<!-- ========== DISCLAIMER CONTENT ========== -->
+<main class="container disclaimer-section">
+  <div class="disclaimer-content">
+    <p class="disclaimer-meta">Last updated: April 14, 2025 · Effective immediately</p>
+
+    <p>The information provided by <strong>Abstract Built Matter</strong> ("we," "our," or "us") on this website is for general informational and educational purposes only. All information is provided in good faith, but we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, or completeness of any information on the site.</p>
+
+    <div class="highlight-box">
+      <strong>Please note:</strong> The content on Abstract Built Matter reflects our editorial perspective and is not a substitute for professional advice. Always consult a qualified professional for your specific circumstances.
+    </div>
+
+    <h2>1. General Information Only</h2>
+    <p>The articles, photographs, illustrations, and other materials on this website are intended to inspire and inform. They do not constitute professional architectural, interior design, engineering, legal, or financial advice. You should not rely solely on the information on this site to make decisions about your own projects, property, or investments.</p>
+    <p>Every building project involves unique conditions, regulations, and constraints. What works in one situation may not be appropriate or safe in another. Always engage qualified professionals — such as licensed architects, engineers, and contractors — before undertaking any design or construction work.</p>
+
+    <h2>2. No Professional Relationship</h2>
+    <p>Your use of this website and any communication with us through it does not create a professional-client relationship of any kind. While we welcome your questions and feedback, we cannot provide individualized design advice or consultation through this platform. If you need professional guidance, we encourage you to hire a qualified expert in your area.</p>
+
+    <h2>3. Accuracy and Completeness</h2>
+    <p>We strive to keep our content accurate and up to date, but we cannot guarantee that everything on the site is free from errors, omissions, or outdated information. Design trends, building codes, materials, and technologies evolve rapidly. Any reliance you place on the information on this site is strictly at your own risk.</p>
+    <p>We reserve the right to make changes to the content at any time without notice. We are not obligated to update any information on our site, and we make no commitment to do so.</p>
+
+    <h2>4. External Links Disclaimer</h2>
+    <p>This website may contain links to other websites or content belonging to or originating from third parties. Such external links are not investigated, monitored, or checked for accuracy, adequacy, validity, reliability, or completeness by us.</p>
+    <p>We do not warrant, endorse, guarantee, or assume responsibility for the accuracy or reliability of any information offered by third-party websites linked through our site or any website or feature linked in any banner or other advertising. We will not be a party to or in any way be responsible for monitoring any transaction between you and third-party providers of products or services.</p>
+
+    <h2>5. Affiliates and Sponsorships</h2>
+    <p>Some articles or pages on this site may contain affiliate links or mention sponsored products. If you click on an affiliate link and make a purchase, we may receive a small commission at no additional cost to you. We only recommend products or services that we believe may be of interest to our readers, but we cannot guarantee your satisfaction with any third-party product or service.</p>
+    <p>Any sponsored content will be clearly identified as such. Sponsors do not have editorial control over our content, and our opinions remain our own.</p>
+
+    <h2>6. Limitation of Liability</h2>
+    <p>To the maximum extent permitted by law, Abstract Built Matter and its contributors shall not be liable for any direct, indirect, incidental, consequential, or punitive damages arising out of or related to your use of this website or reliance on any information provided herein. This includes, without limitation, damages for loss of profits, goodwill, data, or other intangible losses.</p>
+    <p>This limitation of liability applies regardless of the legal theory on which the claim is based, whether in contract, tort (including negligence), strict liability, or otherwise, and even if we have been advised of the possibility of such damages.</p>
+
+    <h2>7. Images and Media</h2>
+    <p>Photographs, illustrations, and other visual media on this site are used for illustrative purposes. Some images may be sourced from third-party platforms such as Unsplash, or created by our editorial team. While we make every effort to respect copyright and licensing requirements, we cannot guarantee that all images accurately represent the projects or products described in accompanying text.</p>
+    <p>If you believe that any content on our site infringes your copyright, please contact us so we can address the issue promptly.</p>
+
+    <h2>8. Testimonials and Opinions</h2>
+    <p>Any testimonials or opinions expressed on this site are those of the individual authors or contributors and do not necessarily reflect the views of Abstract Built Matter as a whole. We do not verify the accuracy of testimonials, and they should not be considered representative of all users or readers.</p>
+
+    <h2>9. "Do Your Own Research"</h2>
+    <p>We encourage our readers to conduct their own research and consult multiple sources before making decisions based on the content of this site. Our goal is to inspire and inform, but we recognize that our perspective is just one among many. Use your own judgment and seek professional advice when appropriate.</p>
+
+    <h2>10. Updates to This Disclaimer</h2>
+    <p>We may update this Disclaimer from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. Any changes will be posted on this page with an updated "last updated" date. We encourage you to review this page periodically to stay informed.</p>
+
+    <h2>11. Contact Us</h2>
+    <p>If you have questions about this Disclaimer, please contact us:</p>
+    <ul>
+      <li>Email: <a href="mailto:legal@abstractbuiltmatter.com">legal@abstractbuiltmatter.com</a></li>
+      <li>Or use our <a href="contact.html">contact form</a>.</li>
+    </ul>
+
+    <p style="margin-top: 2rem; font-size: 0.9rem; color: #666; border-top: 1px solid var(--line); padding-top: 1.5rem;">This disclaimer is provided for informational purposes and does not constitute legal advice. For specific legal concerns, please consult a qualified attorney.</p>
+  </div>
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="editorial-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo" style="margin-bottom:8px;">
+          <div class="logo-mark" style="background:var(--ink); color:var(--paper);">A</div>
+          <div class="logo-text" style="font-size:1.4rem;">Abstract Built Matter</div>
+        </div>
+        <p>An independent journal of interior design and architecture. Published since 2019.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#">Interior Design</a></li>
+          <li><a href="#">Architecture</a></li>
+          <li><a href="#">Materials</a></li>
+          <li><a href="#">Lighting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Information</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Follow</h5>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Pinterest</a></li>
+          <li><a href="#">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Abstract Built Matter. All rights reserved.</span>
+      <div>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="cookies.html">Cookies</a>
+        <a href="disclaimer.html">Disclaimer</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== SCHEMA MARKUP ========== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Disclaimer · Abstract Built Matter",
+  "description": "Important disclaimers regarding the content and use of Abstract Built Matter.",
+  "url": "https://abstractbuiltmatter.com/disclaimer.html",
+  "about": {
+    "@type": "WebPage",
+    "name": "Disclaimer",
+    "dateModified": "2025-04-14",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Abstract Built Matter"
+    }
+  }
+}
+</script>
+
+<!-- ========== JAVASCRIPT ========== -->
+<script>
+  (function() {
+    // ----- SEARCH TOGGLE -----
+    const searchToggle = document.getElementById('searchToggle');
+    const searchPanel = document.getElementById('searchPanel');
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+
+    searchToggle.addEventListener('click', function() {
+      searchPanel.classList.toggle('active');
+      if (searchPanel.classList.contains('active')) {
+        searchInput.focus();
+      }
+    });
+
+    // Demo search
+    function performSearch() {
+      const query = searchInput.value.trim();
+      if (query === '') {
+        alert('Please enter a search term.');
+      } else {
+        alert('Search demo: you searched for "' + query + '". In a real site, this would show results.');
+      }
+    }
+
+    searchButton.addEventListener('click', performSearch);
+    searchInput.addEventListener('keyup', function(e) {
+      if (e.key === 'Enter') performSearch();
+    });
+  })();
+</script>
+</body>
+</html>

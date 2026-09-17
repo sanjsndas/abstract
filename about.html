@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About · Abstract Built Matter</title>
+  <meta name="description" content="About Abstract Built Matter — an independent journal of interior design and architecture. Our mission, editorial approach, and the team behind the publication.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="About · Abstract Built Matter">
+  <meta property="og:description" content="An independent journal of interior design and architecture. Learn about our mission and editorial approach.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=630&fit=crop">
+  <meta property="og:url" content="https://abstractbuiltmatter.com/about.html">
+  <link rel="canonical" href="https://abstractbuiltmatter.com/about.html">
+  <!-- Fonts + Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --ink: #1a1a1a;
+      --paper: #f9f8f6;
+      --paper-alt: #f1efec;
+      --line: #ddd9d2;
+      --line-dark: #c2bbb2;
+      --accent: #9b7b5e;
+      --accent-deep: #6f5640;
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --max-width: 1380px;
+      --content-width: 820px;
+    }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 350;
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ----- TYPOGRAPHY ----- */
+    h1, h2, h3, h4 {
+      font-family: var(--serif);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    h1 { font-size: 3.2rem; }
+    h2 { font-size: 2.2rem; margin-bottom: 1.2rem; }
+    h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    h4 { font-size: 1.15rem; font-family: var(--sans); font-weight: 600; letter-spacing: -0.01em; }
+
+    a {
+      color: var(--ink);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    a:hover {
+      color: var(--accent-deep);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ----- LAYOUT ----- */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* ----- HEADER ----- */
+    .blog-header {
+      border-bottom: 1px solid var(--line);
+      padding: 24px 0 16px;
+      background: var(--paper);
+      position: relative;
+      z-index: 10;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-mark {
+      width: 44px;
+      height: 44px;
+      background: var(--ink);
+      color: var(--paper);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      line-height: 1;
+      border-radius: 2px;
+      transform: rotate(-2deg);
+    }
+
+    .logo-text {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+
+    .logo-text span {
+      display: block;
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-top: 2px;
+    }
+
+    .main-nav ul {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+      font-size: 0.9rem;
+      font-weight: 450;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .main-nav a {
+      color: #3d3d3d;
+      font-size: 0.82rem;
+    }
+
+    .main-nav a:hover {
+      color: var(--accent-deep);
+    }
+
+    .search-trigger {
+      background: none;
+      border: 1px solid var(--line);
+      border-radius: 40px;
+      padding: 8px 18px;
+      font-size: 0.85rem;
+      font-family: var(--sans);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #4a4a4a;
+      transition: all 0.2s;
+    }
+
+    .search-trigger:hover {
+      background: var(--paper-alt);
+      border-color: var(--line-dark);
+    }
+
+    /* ----- SEARCH PANEL ----- */
+    .search-panel {
+      display: none;
+      padding: 16px 0 24px;
+      border-bottom: 1px solid var(--line);
+      background: var(--paper);
+    }
+
+    .search-panel.active {
+      display: block;
+    }
+
+    .search-inner {
+      display: flex;
+      gap: 12px;
+    }
+
+    .search-inner input {
+      flex: 1;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      background: white;
+      font-family: var(--sans);
+      font-size: 1rem;
+      border-radius: 2px;
+    }
+
+    .search-inner input:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .search-inner button {
+      padding: 0 28px;
+      background: var(--ink);
+      color: white;
+      border: none;
+      font-family: var(--sans);
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+
+    .search-inner button:hover {
+      background: var(--accent-deep);
+    }
+
+    /* ----- PAGE CONTENT ----- */
+    .page-header {
+      padding: 56px 0 32px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 48px;
+    }
+
+    .page-header h1 {
+      font-size: 3.6rem;
+      margin-bottom: 12px;
+      letter-spacing: -0.03em;
+    }
+
+    .page-header .subhead {
+      font-size: 1.2rem;
+      color: #4a4a4a;
+      max-width: 700px;
+      font-weight: 350;
+      line-height: 1.6;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 64px;
+      align-items: start;
+      margin-bottom: 72px;
+    }
+
+    .about-content h2 {
+      font-size: 2rem;
+      margin-top: 48px;
+      margin-bottom: 20px;
+    }
+
+    .about-content h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .about-content p {
+      font-size: 1.05rem;
+      color: #2e2e2e;
+      margin-bottom: 24px;
+      line-height: 1.8;
+    }
+
+    .about-content blockquote {
+      border-left: 3px solid var(--accent);
+      padding-left: 28px;
+      margin: 36px 0;
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      line-height: 1.4;
+      color: var(--ink);
+      font-style: italic;
+    }
+
+    .about-content blockquote cite {
+      display: block;
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-style: normal;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      margin-top: 16px;
+      color: var(--accent-deep);
+    }
+
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin: 48px 0;
+      padding: 40px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .stat-item .num {
+      font-family: var(--serif);
+      font-size: 2.8rem;
+      color: var(--accent-deep);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-item .label {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #5a5a5a;
+      font-weight: 500;
+    }
+
+    .sidebar-about {
+      position: sticky;
+      top: 24px;
+    }
+
+    .sidebar-widget {
+      margin-bottom: 44px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .sidebar-widget:last-child {
+      border-bottom: none;
+    }
+
+    .sidebar-widget h4 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #4b4b4b;
+    }
+
+    .sidebar-widget ul {
+      list-style: none;
+    }
+
+    .sidebar-widget li {
+      margin-bottom: 14px;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .sidebar-widget li a {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dotted var(--line);
+      padding-bottom: 8px;
+    }
+
+    .team-member {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 24px;
+      align-items: flex-start;
+    }
+
+    .team-member .avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--line);
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .team-member .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .team-member .info h5 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .team-member .info span {
+      font-size: 0.8rem;
+      color: #777;
+    }
+
+    .editor-note {
+      background: var(--paper-alt);
+      padding: 32px 28px;
+      border-radius: 4px;
+      margin-top: 20px;
+    }
+
+    .editor-note p {
+      font-size: 0.92rem;
+      font-style: italic;
+      color: #3d3d3d;
+      line-height: 1.7;
+    }
+
+    .editor-note .editor-name {
+      font-style: normal;
+      font-weight: 600;
+      margin-top: 14px;
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      margin: 56px 0;
+    }
+
+    .value-card {
+      border-top: 2px solid var(--ink);
+      padding-top: 24px;
+    }
+
+    .value-card .value-num {
+      font-family: var(--serif);
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 12px;
+      line-height: 1;
+    }
+
+    .value-card h4 {
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+    }
+
+    .value-card p {
+      font-size: 0.92rem;
+      color: #4a4a4a;
+      line-height: 1.7;
+    }
+
+    /* ----- NEWSLETTER ----- */
+    .newsletter-block {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px;
+      border-radius: 6px;
+      margin: 56px 0 32px;
+    }
+
+    .newsletter-block h3 {
+      color: var(--paper);
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+
+    .newsletter-block p {
+      color: #b9b2a8;
+      margin-bottom: 24px;
+      font-size: 0.95rem;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      min-width: 240px;
+      padding: 14px 18px;
+      border: none;
+      border-radius: 2px;
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      background: #2b2b2b;
+      color: white;
+    }
+
+    .newsletter-form input::placeholder {
+      color: #8a837b;
+    }
+
+    .newsletter-form button {
+      padding: 14px 32px;
+      background: var(--accent);
+      color: var(--ink);
+      border: none;
+      font-weight: 600;
+      font-family: var(--sans);
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+
+    .newsletter-form button:hover {
+      background: #b18f6f;
+    }
+
+    /* ----- FOOTER ----- */
+    .editorial-footer {
+      border-top: 1px solid var(--line);
+      padding: 56px 0 32px;
+      background: var(--paper-alt);
+      margin-top: 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand p {
+      font-size: 0.88rem;
+      color: #4d4d4d;
+      max-width: 280px;
+      margin-top: 12px;
+    }
+
+    .footer-col h5 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #5a5a5a;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col a {
+      font-size: 0.88rem;
+      color: #3d3d3d;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 0.78rem;
+      color: #777;
+    }
+
+    .footer-bottom a {
+      color: #555;
+      margin-left: 20px;
+    }
+
+    /* ----- RESPONSIVE ----- */
+    @media (max-width: 1024px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .sidebar-about {
+        position: static;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      h1 { font-size: 2.6rem; }
+      .page-header h1 { font-size: 2.8rem; }
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .main-nav ul {
+        flex-wrap: wrap;
+        gap: 16px 24px;
+      }
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+      .stat-row {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      h1 { font-size: 2rem; }
+      .page-header h1 { font-size: 2.2rem; }
+      .container { padding: 0 20px; }
+      .newsletter-block { padding: 32px 24px; }
+      .search-inner { flex-direction: column; }
+      .search-inner button { padding: 14px; }
+      .about-content blockquote { font-size: 1.2rem; padding-left: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="blog-header">
+  <div class="container">
+    <div class="header-inner">
+      <div class="logo">
+        <div class="logo-mark">A</div>
+        <div class="logo-text">Abstract Built Matter<span>Interior · Architecture</span></div>
+      </div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="terms.html">Terms Of Privacy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookies.html">Cookies Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="categories.html">Categories</a></li>
+        </ul>
+      </nav>
+      <button class="search-trigger" id="searchToggle" aria-label="Open search">
+        <i class="fas fa-search"></i> Search
+      </button>
+    </div>
+  </div>
+  <!-- search panel -->
+  <div class="search-panel" id="searchPanel">
+    <div class="container">
+      <div class="search-inner">
+        <input type="text" id="searchInput" placeholder="Search articles, topics, or keywords..." aria-label="Search articles">
+        <button id="searchButton">Search</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ========== MAIN CONTENT ========== -->
+<main class="container main-content">
+  <!-- Page Header -->
+  <div class="page-header">
+    <h1>About the Journal</h1>
+    <p class="subhead">An independent publication exploring the intersection of design, materials, and the spaces we inhabit. We believe good design is a form of quiet activism.</p>
+  </div>
+
+  <!-- About Grid -->
+  <div class="about-grid">
+    <!-- Main Content -->
+    <div class="about-content">
+      <h2>Our Mission</h2>
+      <p>Abstract Built Matter was founded in 2019 with a simple conviction: that the built environment shapes how we live, connect, and care for the planet. We publish in-depth essays, practical guides, and critical perspectives on interior design, architecture, materials, and the art of living well.</p>
+      <p>In an era of fleeting trends and digital noise, we aim to be a counterpoint — a place for considered writing, rigorous thinking, and visual storytelling that respects the intelligence of our readers.</p>
+
+      <blockquote>
+        “We believe good design is a form of quiet activism — it shapes how we live, connect, and care for the planet.”
+        <cite>— Lena Ortiz, Editor-in-Chief</cite>
+      </blockquote>
+
+      <h2>Editorial Approach</h2>
+      <p>Every article we publish is grounded in research, observation, and conversations with practitioners. We don't chase fads. We look for ideas that endure — principles of proportion, material honesty, passive design, and spatial psychology that have relevance across cultures and climates.</p>
+      <p>Our editorial team works with architects, designers, material scientists, and historians to bring depth and nuance to every topic. Whether we're dissecting a joinery detail or examining the carbon footprint of concrete, we aim to inform and provoke in equal measure.</p>
+
+      <h2>Independence</h2>
+      <p>Abstract Built Matter is entirely independent. We are reader-supported and carry no sponsored content. Our recommendations are based on merit, not advertising relationships. This allows us to speak candidly about the challenges facing our industries — from greenwashing to labor practices — without compromise.</p>
+
+      <!-- Stats -->
+      <div class="stat-row">
+        <div class="stat-item">
+          <div class="num">240+</div>
+          <div class="label">Articles Published</div>
+        </div>
+        <div class="stat-item">
+          <div class="num">18k</div>
+          <div class="label">Monthly Readers</div>
+        </div>
+        <div class="stat-item">
+          <div class="num">6</div>
+          <div class="label">Years Independent</div>
+        </div>
+      </div>
+
+      <h2>What We Cover</h2>
+      <p>Our editorial spans interior design, architecture, materials, lighting, space planning, furniture, and modern homes. We are particularly interested in the intersection of sustainability and aesthetics — how we can build and live more responsibly without sacrificing beauty or comfort.</p>
+      <p>We also believe that design is not just for professionals. Our guides are written for anyone who wants to understand their home, their materials, and the forces that shape the built world.</p>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar-about">
+      <div class="sidebar-widget">
+        <h4>Editorial Team</h4>
+        <div class="team-member">
+          <div class="avatar">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" alt="Lena Ortiz">
+          </div>
+          <div class="info">
+            <h5>Lena Ortiz</h5>
+            <span>Editor-in-Chief</span>
+          </div>
+        </div>
+        <div class="team-member">
+          <div class="avatar">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Marcus Chen">
+          </div>
+          <div class="info">
+            <h5>Marcus Chen</h5>
+            <span>Architecture Editor</span>
+          </div>
+        </div>
+        <div class="team-member">
+          <div class="avatar">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="Sofia Lindqvist">
+          </div>
+          <div class="info">
+            <h5>Sofia Lindqvist</h5>
+            <span>Materials & Sustainability</span>
+          </div>
+        </div>
+        <div class="team-member">
+          <div class="avatar">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="James Okonkwo">
+          </div>
+          <div class="info">
+            <h5>James Okonkwo</h5>
+            <span>Contributing Editor</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-widget">
+        <h4>Our Values</h4>
+        <ul>
+          <li><a href="#">Independence <span>→</span></a></li>
+          <li><a href="#">Rigour <span>→</span></a></li>
+          <li><a href="#">Clarity <span>→</span></a></li>
+          <li><a href="#">Sustainability <span>→</span></a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-widget">
+        <h4>Contact</h4>
+        <p style="font-size:0.9rem; color:#3d3d3d; margin-bottom:12px;">For editorial inquiries, pitches, or feedback:</p>
+        <p style="font-size:0.9rem;"><a href="mailto:hello@abstractbuiltmatter.com" style="border-bottom:1px solid var(--line);">hello@abstractbuiltmatter.com</a></p>
+      </div>
+
+      <div class="editor-note">
+        <p>“We believe good design is a form of quiet activism — it shapes how we live, connect, and care for the planet.”</p>
+        <div class="editor-name">— Lena Ortiz, Editor-in-Chief</div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Values Cards -->
+  <div class="values-grid">
+    <div class="value-card">
+      <div class="value-num">01</div>
+      <h4>Independence</h4>
+      <p>We are reader-supported and carry no sponsored content. Our recommendations are based on merit, not advertising relationships.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-num">02</div>
+      <h4>Rigour</h4>
+      <p>Every article is grounded in research, observation, and conversations with practitioners. We don't chase fads; we look for ideas that endure.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-num">03</div>
+      <h4>Clarity</h4>
+      <p>We write for anyone who wants to understand their home and the built world — not just professionals. Clarity is a form of respect.</p>
+    </div>
+  </div>
+
+  <!-- Newsletter -->
+  <div class="newsletter-block">
+    <h3>Stay inspired</h3>
+    <p>Get our weekly digest of new articles, project tours, and design thinking — no noise, just substance.</p>
+    <form class="newsletter-form" id="newsletterForm">
+      <input type="email" placeholder="Your email address" required aria-label="Email address">
+      <button type="submit">Subscribe</button>
+    </form>
+    <p style="font-size:0.78rem; margin-top:16px; color:#8a837b;">We respect your inbox. Unsubscribe anytime.</p>
+  </div>
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="editorial-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo" style="margin-bottom:8px;">
+          <div class="logo-mark" style="background:var(--ink); color:var(--paper);">A</div>
+          <div class="logo-text" style="font-size:1.4rem;">Abstract Built Matter</div>
+        </div>
+        <p>An independent journal of interior design and architecture. Published since 2019.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#">Interior Design</a></li>
+          <li><a href="#">Architecture</a></li>
+          <li><a href="#">Materials</a></li>
+          <li><a href="#">Lighting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Information</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Follow</h5>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Pinterest</a></li>
+          <li><a href="#">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Abstract Built Matter. All rights reserved.</span>
+      <div>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="cookies.html">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== SCHEMA MARKUP ========== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About · Abstract Built Matter",
+  "description": "About Abstract Built Matter — an independent journal of interior design and architecture.",
+  "url": "https://abstractbuiltmatter.com/about.html",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Abstract Built Matter"
+  }
+}
+</script>
+
+<!-- ========== JAVASCRIPT ========== -->
+<script>
+  (function() {
+    // ----- SEARCH TOGGLE -----
+    const searchToggle = document.getElementById('searchToggle');
+    const searchPanel = document.getElementById('searchPanel');
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+
+    searchToggle.addEventListener('click', function() {
+      searchPanel.classList.toggle('active');
+      if (searchPanel.classList.contains('active')) {
+        searchInput.focus();
+      }
+    });
+
+    function performSearch() {
+      const query = searchInput.value.trim().toLowerCase();
+      if (query === '') return;
+      // For the about page, we just alert that search is a demo
+      alert('Search is available on the homepage. (Demo)');
+    }
+
+    searchButton.addEventListener('click', performSearch);
+    searchInput.addEventListener('keyup', function(e) {
+      if (e.key === 'Enter') performSearch();
+    });
+
+    // ----- NEWSLETTER FORM -----
+    const newsletterForm = document.getElementById('newsletterForm');
+    if (newsletterForm) {
+      newsletterForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const input = this.querySelector('input');
+        alert('Thank you for subscribing. (Demo — no data sent.)');
+        input.value = '';
+      });
+    }
+  })();
+</script>
+</body>
+</html>
